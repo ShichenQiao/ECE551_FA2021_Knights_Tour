@@ -1,0 +1,50 @@
+Warning: Design 'KnightsTour' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : KnightsTour
+Version: S-2021.06
+Date   : Tue Nov 30 14:54:31 2021
+****************************************
+
+Operating Conditions: tt0p85v25c   Library: saed32lvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: iIR/smpl_tmr_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: iIR/smpl_tmr_reg[0]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  KnightsTour        16000                 saed32lvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  iIR/smpl_tmr_reg[0]/CLK (DFFARX1_LVT)                   0.00       0.00 r
+  iIR/smpl_tmr_reg[0]/QN (DFFARX1_LVT)                    0.05       0.05 f
+  iIR/smpl_tmr_reg[0]/D (DFFARX1_LVT)                     0.01       0.06 f
+  data arrival time                                                  0.06
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.15       0.15
+  iIR/smpl_tmr_reg[0]/CLK (DFFARX1_LVT)                   0.00       0.15 r
+  library hold time                                      -0.01       0.14
+  data required time                                                 0.14
+  --------------------------------------------------------------------------
+  data required time                                                 0.14
+  data arrival time                                                 -0.06
+  --------------------------------------------------------------------------
+  slack (VIOLATED)                                                  -0.07
+
+
+1

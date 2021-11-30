@@ -1,0 +1,33 @@
+Warning: Design 'KnightsTour' has '2' unresolved references. For more detailed information, use the "link" command. (UID-341)
+ 
+****************************************
+Report : area
+Design : KnightsTour
+Version: S-2021.06
+Date   : Tue Nov 30 14:54:31 2021
+****************************************
+
+Library(s) Used:
+
+    saed32lvt_tt0p85v25c (File: /cae/apps/data/saed32_edk-2018/lib/stdcell_lvt/db_nldm/saed32lvt_tt0p85v25c.db)
+
+Number of ports:                           19
+Number of nets:                          4406
+Number of cells:                         3608
+Number of combinational cells:           2709
+Number of sequential cells:               863
+Number of macros/black boxes:               0
+Number of buf/inv:                        361
+Number of references:                      55
+
+Combinational area:               7007.512512
+Buf/Inv area:                      490.752069
+Noncombinational area:            5798.803812
+Macro/Black Box area:                0.000000
+Net Interconnect area:            3054.722263
+
+Total cell area:                 12806.316324
+Total area:                      15861.038587
+
+Information: This design contains black box (unknown) components. (RPT-8)
+1

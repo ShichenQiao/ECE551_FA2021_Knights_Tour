@@ -4,7 +4,7 @@
 read_file -format sverilog { ../provided_files/KnightsTour.sv ../src/TourLogic.sv ../src/TourCmd.sv ../src/cmd_proc.sv \
 							 ../src/charge.sv ../src/inert_intf.sv ../src/SPI_mnrch.sv ../provided_files/inertial_integrator.sv \
 							 ../src/UART_tx.sv ../src/UART_rx.sv ../src/UART.v ../src/UART_wrapper.sv \
-							 ../src/MtrDrv.sv ../src/PID.sv ../src/reset_synch.sv ../provided_files/IR_intf.sv }
+							 ../src/MtrDrv.sv ../src/PID.sv ../src/rst_synch.sv ../provided_files/IR_intf.sv }
 
 ################################
 # Set KnightsTour as top level #
