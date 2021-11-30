@@ -11,7 +11,7 @@ module TourLogic(clk, rst_n, x_start, y_start, go, done, indx, move);
 	////////////////////////////////////////
 	// Declare needed internal registers //
 	//////////////////////////////////////
-	logic [4:0] visited[0:4][0:4];				// 2-D array of 5-bit vectors that keep track of where on the board the knight has visited.  Will be reduced to 1-bit boolean after debug phase 
+	logic visited[0:4][0:4];					// 2-D array of 1-bit boolean values that keep track of where on the board the knight has visited.
 	logic [7:0] last_move[0:23];				// 1-D array (of size 24) to keep track of last move taken from each move index
 	logic [7:0] possible_move[0:23];			// 1-D array (of size 24) to keep track of possible moves from each move index
 	logic [7:0] move_try;						// hold move would be tried next
@@ -65,13 +65,13 @@ module TourLogic(clk, rst_n, x_start, y_start, go, done, indx, move);
 		if(init) begin
 			for(integer i = 0; i < 5; i++)
 				for(integer j = 0; j < 5; j++)
-					visited[i][j] <= 5'h00;						// clear the visited status of the board when resetting
-			visited[y_start][x_start] <= 5'h01;					// set the initial position with a value 1, indicating visited
+					visited[i][j] <= 1'b0;						// clear the visited status of the board when resetting
+			visited[y_start][x_start] <= 1'b1;					// set the initial position with a value 1, indicating visited
 		end
 		else if(update_position)
-			visited[yy + off_y(move_try)][xx + off_x(move_try)] <= move_num + 5'h02;		// take the current move_try and visit the destination square when we are told to move by update_position
+			visited[yy + off_y(move_try)][xx + off_x(move_try)] <= 1'b1;		// take the current move_try and visit the destination square when we are told to move by update_position
 		else if(backing)
-			visited[yy][xx] <= 5'h00;							// clear the visiting status when backing up from the current square
+			visited[yy][xx] <= 1'b0;							// clear the visiting status when backing up from the current square
 	
 	//////////////////////////////////////////////////////////////////
 	// Registers recording the possible moves from each move index //
