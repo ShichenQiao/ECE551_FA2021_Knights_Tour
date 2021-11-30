@@ -8,132 +8,132 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-dC:/Users/13651/Desktop/ECE 551/Ex23
+dC:/intelFPGA/20.1
 vcharge
 Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
-Z1 !s110 1638246839
+Z1 !s110 1638305491
 !i10b 1
 !s100 DdZZ^4I9jl<NdJVa;afkE3
 Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
-IZ>OmIibH4S^b9ZF`1;JlD3
+IOBWLoU3BDMe4PTV]C]ehI2
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 S1
-Z4 dC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour
-w1637031358
-8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/charge.sv
-FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/charge.sv
-!i122 5
+Z4 dC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main
+Z5 w1638289894
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/charge.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/charge.sv
+!i122 46
 L0 1 205
-Z5 OV;L;2020.1;71
+Z6 OV;L;2020.1;71
 r1
 !s85 0
 31
-Z6 !s108 1638246839.000000
-!s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/charge.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/charge.sv|
+Z7 !s108 1638305491.000000
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/charge.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/charge.sv|
 !i113 1
-Z7 o-work work -sv
-Z8 tCvgOpt 0
+Z8 o-work work -sv
+Z9 tCvgOpt 0
 vcmd_proc
 R0
 R1
 !i10b 1
 !s100 `1?MOOB`6b3;zBR`CWFJm2
 R2
-I^96fo<_SicaWX1DcGakam2
+IINQbUSOS?hkVnd^_8kbP91
 R3
 S1
 R4
-w1637165306
-8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/cmd_proc.sv
-FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/cmd_proc.sv
-!i122 6
-L0 1 191
 R5
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/cmd_proc.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/cmd_proc.sv
+!i122 47
+L0 1 191
+R6
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/cmd_proc.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/cmd_proc.sv|
-!i113 1
 R7
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/cmd_proc.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/cmd_proc.sv|
+!i113 1
 R8
+R9
 vinert_intf
 R0
 R1
 !i10b 1
 !s100 BDh6h?5kbiI[]9PhL>3ka1
 R2
-ICg_?I:f7Q45T^[1JV>]153
+I?baVC6M[@nXQ=ROzcVhOd1
 R3
 S1
 R4
-w1636562396
-8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/inert_intf.sv
-FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/inert_intf.sv
-!i122 7
-L0 7 160
 R5
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/inert_intf.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/inert_intf.sv
+!i122 48
+L0 7 160
+R6
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/inert_intf.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/inert_intf.sv|
-!i113 1
 R7
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/inert_intf.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/inert_intf.sv|
+!i113 1
 R8
+R9
 vinertial_integrator
 R0
 R1
 !i10b 1
 !s100 EKB7oNKD40]U9]>GEWcMB0
 R2
-I3@Q9K5Gm2[VHm[8^NN:F23
+Ib>ob:o8J`mE;JBQ@P5E661
 R3
 S1
 R4
-w1637288168
-8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/inertial_integrator.sv
-FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/inertial_integrator.sv
-!i122 0
-L0 1 204
 R5
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/inertial_integrator.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/inertial_integrator.sv
+!i122 41
+L0 1 204
+R6
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/inertial_integrator.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/inertial_integrator.sv|
+!s108 1638305490.000000
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/inertial_integrator.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/inertial_integrator.sv|
 !i113 1
-R7
 R8
+R9
 vinverse_PWM11e
 R0
 R1
 !i10b 1
 !s100 o^U]J5XW7zgHeJ8c[?geB1
 R2
-I04hTS[LohC1>HRLk1[mHd3
+I^BDOal9Re95^Q;2mP:[_A1
 R3
 S1
 R4
-Z9 w1638051986
-Z10 8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/KnightPhysics.sv
-Z11 FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/KnightPhysics.sv
-!i122 2
-L0 250 49
 R5
+Z10 8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/KnightPhysics.sv
+Z11 FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/KnightPhysics.sv
+!i122 43
+L0 250 49
+R6
 r1
 !s85 0
 31
-R6
-Z12 !s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/KnightPhysics.sv|
-Z13 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/KnightPhysics.sv|
-!i113 1
 R7
+Z12 !s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/KnightPhysics.sv|
+Z13 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/KnightPhysics.sv|
+!i113 1
 R8
+R9
 ninverse_@p@w@m11e
 vIR_intf
 R0
@@ -141,25 +141,25 @@ R1
 !i10b 1
 !s100 d;L^HH]ULa@;XbI3N=TVG2
 R2
-IDAcbLnna4bNHEaFgRP0S82
+I_lYLV^ES37IG39PeB`BNB3
 R3
 S1
 R4
-Z14 w1637268374
-Z15 8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/IR_intf.sv
-Z16 FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/IR_intf.sv
-!i122 1
-L0 1 120
 R5
+Z14 8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/IR_intf.sv
+Z15 FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/IR_intf.sv
+!i122 42
+L0 1 120
+R6
 r1
 !s85 0
 31
-R6
-Z17 !s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/IR_intf.sv|
-Z18 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/IR_intf.sv|
-!i113 1
 R7
+Z16 !s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/IR_intf.sv|
+Z17 !s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/IR_intf.sv|
+!i113 1
 R8
+R9
 n@i@r_intf
 vKnightPhysics
 R0
@@ -167,25 +167,25 @@ R1
 !i10b 1
 !s100 F@B_Talb=cK9kZlK0[Rj:2
 R2
-IDZJzzO1J0PGEmSeTzZ8bN2
+ICEOA]CT1aaOji<JAB8`HR2
 R3
 S1
 R4
-R9
+R5
 R10
 R11
-!i122 2
+!i122 43
 L0 1 245
-R5
+R6
 r1
 !s85 0
 31
-R6
+R7
 R12
 R13
 !i113 1
-R7
 R8
+R9
 n@knight@physics
 vKnightsTour
 R0
@@ -193,77 +193,77 @@ R1
 !i10b 1
 !s100 I:AZ`0V<8LmKR7W=BhG]61
 R2
-InH@JC68oU52XQ8i]XA1oH3
+I1L9:CoFR8=f3MNCX][U0S2
 R3
 S1
 R4
-w1638037864
-8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/KnightsTour.sv
-FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/KnightsTour.sv
-!i122 3
-L0 1 116
 R5
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/KnightsTour.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/KnightsTour.sv
+!i122 44
+L0 1 116
+R6
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/KnightsTour.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/KnightsTour.sv|
-!i113 1
 R7
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/KnightsTour.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/KnightsTour.sv|
+!i113 1
 R8
+R9
 n@knights@tour
 vMtrDrv
 R0
-R1
+Z18 !s110 1638305492
 !i10b 1
 !s100 L4X45hloRlPm1Z^LgJ3CQ3
 R2
-IRm5O2nm<86TVR;_f7o0Yc3
+I:0Yic_RV]RJ^PSQ4jX18j0
 R3
 S1
 R4
-w1633101495
-8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/MtrDrv.sv
-FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/MtrDrv.sv
-!i122 8
-L0 1 19
 R5
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/MtrDrv.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/MtrDrv.sv
+!i122 49
+L0 1 19
+R6
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/MtrDrv.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/MtrDrv.sv|
+Z19 !s108 1638305492.000000
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/MtrDrv.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/MtrDrv.sv|
 !i113 1
-R7
 R8
+R9
 n@mtr@drv
 vPID
 R0
-R1
+R18
 !i10b 1
 !s100 RWNnXH`9ON2kN0;meZbk>3
 R2
-IacoZH9mB5TWFJc8lH]OzM3
+IPA4=:QKn2G00nf2m=5Odg1
 R3
 S1
 R4
-w1637250020
-8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/PID.sv
-FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/PID.sv
-!i122 9
-L0 1 118
 R5
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/PID.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/PID.sv
+!i122 50
+L0 1 118
+R6
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/PID.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/PID.sv|
+R19
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/PID.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/PID.sv|
 !i113 1
-R7
 R8
+R9
 n@p@i@d
 vPWM3
 R0
@@ -271,280 +271,331 @@ R1
 !i10b 1
 !s100 ln<lRe`j[nzR5f2KO=z7Y3
 R2
-IZA@dzbRA5]HOY:8fBSz7c0
+I44V[8nMeO4L9?BAdTz53=2
 R3
 S1
 R4
+R5
 R14
 R15
-R16
-!i122 1
+!i122 42
 L0 126 36
-R5
+R6
 r1
 !s85 0
 31
-R6
-R17
-R18
-!i113 1
 R7
+R16
+R17
+!i113 1
 R8
+R9
 n@p@w@m3
 vRemoteComm
 R0
-Z19 !s110 1638246840
+R18
 !i10b 1
 !s100 Zb[BGMbmnLAM1BLQ`IlJQ0
 R2
-IQ?S]YW7K8SF=3[8^XAE:<3
+I6A4SkEF[4d^FBlFY16Uzb1
 R3
 S1
 R4
-w1634928341
-8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/RemoteComm.sv
-FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/RemoteComm.sv
-!i122 10
-L0 1 86
 R5
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/RemoteComm.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/RemoteComm.sv
+!i122 51
+L0 1 86
+R6
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/RemoteComm.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/RemoteComm.sv|
+R19
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/RemoteComm.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/RemoteComm.sv|
 !i113 1
-R7
 R8
+R9
 n@remote@comm
 vreset_synch
 R0
-R19
+!s110 1638305184
 !i10b 1
 !s100 gQRF8YRNdQZ9GYIkQf4_32
 R2
-IgV1agUb[SUb`BY3VWSCKN0
+II:nJBngU]j=FhE]=B^D>P3
 R3
 S1
 R4
-w1636598283
-8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/reset_synch.sv
-FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/reset_synch.sv
-!i122 11
-L0 1 20
 R5
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/reset_synch.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/reset_synch.sv
+!i122 32
+Z20 L0 1 20
+R6
 r1
 !s85 0
 31
-Z20 !s108 1638246840.000000
-!s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/reset_synch.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/reset_synch.sv|
+!s108 1638305184.000000
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/reset_synch.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/reset_synch.sv|
 !i113 1
-R7
 R8
+R9
+vrst_synch
+R0
+Z21 !s110 1638305493
+!i10b 1
+!s100 cBQUCU>31O?m?oHV1bl200
+R2
+Iz=KelNzR@LTIPS7Xa?K^i2
+R3
+S1
+R4
+w1638305451
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/rst_synch.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/rst_synch.sv
+!i122 60
+R20
+R6
+r1
+!s85 0
+31
+Z22 !s108 1638305493.000000
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/rst_synch.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/rst_synch.sv|
+!i113 1
+R8
+R9
 vSPI_iNEMO4
 R0
 R1
 !i10b 1
 !s100 k;KimlM_]X18QPjXB1[CF1
 R2
-I[?PWgkHK>9;5Kz1Wif_UT0
+IYm8=DUJ;D<?6<9i6KN1M]0
 R3
 S1
 R4
-w1637545494
-8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/SPI_iNEMO4.sv
-FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/SPI_iNEMO4.sv
-!i122 4
-L0 1 196
 R5
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/SPI_iNEMO4.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/SPI_iNEMO4.sv
+!i122 45
+L0 1 196
+R6
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/SPI_iNEMO4.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/provided files/SPI_iNEMO4.sv|
-!i113 1
 R7
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/SPI_iNEMO4.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/provided_files/SPI_iNEMO4.sv|
+!i113 1
 R8
+R9
 n@s@p@i_i@n@e@m@o4
 vSPI_mnrch
 R0
-R19
+R18
 !i10b 1
 !s100 EROGDYUPh056J?FNgZW9]1
 R2
-IznA]l3W[^hkP[7`T0hMlh1
+I:Aj;PfDVMY3oC?e0djE5?3
 R3
 S1
 R4
-w1635798833
-8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/SPI_mnrch.sv
-FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/SPI_mnrch.sv
-!i122 12
-L0 1 122
 R5
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/SPI_mnrch.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/SPI_mnrch.sv
+!i122 52
+L0 1 122
+R6
 r1
 !s85 0
 31
-R20
-!s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/SPI_mnrch.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/SPI_mnrch.sv|
+R19
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/SPI_mnrch.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/SPI_mnrch.sv|
 !i113 1
-R7
 R8
+R9
 n@s@p@i_mnrch
 vTourCmd
 R0
-R19
+R18
 !i10b 1
 !s100 KF2NOIL>^dlfY6S9G<ez02
 R2
-IQAS45iGNTzcz3GelOd`E?2
+I1@JoS`0hJzJ1J<Nf3Nkm32
 R3
 S1
 R4
-w1638242441
-8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/TourCmd.sv
-FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/TourCmd.sv
-!i122 13
-L0 1 177
 R5
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/TourCmd.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/TourCmd.sv
+!i122 53
+L0 1 177
+R6
 r1
 !s85 0
 31
-R20
-!s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/TourCmd.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/TourCmd.sv|
+R19
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/TourCmd.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/TourCmd.sv|
 !i113 1
-R7
 R8
+R9
 n@tour@cmd
 vTourLogic
 R0
-R19
+R18
 !i10b 1
-!s100 >7MUSiij44L=o=U^>3bLD2
+!s100 7LA8J:zcgkbSbEJ=CcdHj0
 R2
-ICi71>T><b[123Z]bK[^eF3
+I;JgK1=3A@60eUT^KGEA4O2
 R3
 S1
 R4
-w1637630246
-8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/TourLogic.sv
-FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/TourLogic.sv
-!i122 14
-L0 1 197
-R5
+w1638305158
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/TourLogic.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/TourLogic.sv
+!i122 54
+L0 1 195
+R6
 r1
 !s85 0
 31
-R20
-!s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/TourLogic.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/TourLogic.sv|
-!i113 1
-R7
-R8
-n@tour@logic
-vUART
 R19
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/TourLogic.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/TourLogic.sv|
+!i113 1
+R8
+R9
+n@tour@logic
+vTourLogic_tb
+R0
+R21
+!i10b 1
+!s100 [526ZcOE8LMcUC^D;ZghX1
+R2
+I<3@Cz0O<hjkAOQljzTXPH1
+R3
+S1
+R4
+R5
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/tests/Unit tests/TourLogic_tb.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/tests/Unit tests/TourLogic_tb.sv
+!i122 59
+L0 1 89
+R6
+r1
+!s85 0
+31
+R22
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/tests/Unit tests/TourLogic_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/tests/Unit tests/TourLogic_tb.sv|
+!i113 1
+R8
+R9
+n@tour@logic_tb
+vUART
+R18
 !i10b 1
 !s100 ozZMQQY>8LzjOeP^z:;;L3
 R2
-IQ3Wnm0fE6oe^hC^Ddb]gM3
+I1z2z5hEkYD^=o6A`QUKWb3
 R3
 R4
-w1634566139
-8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/UART.v
-FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/UART.v
-!i122 15
-L0 1 24
 R5
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/UART.v
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/UART.v
+!i122 55
+L0 1 24
+R6
 r1
 !s85 0
 31
-R20
-!s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/UART.v|
-!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/UART.v|
+R19
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/UART.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/UART.v|
 !i113 1
 o-work work
-R8
+R9
 n@u@a@r@t
 vUART_rx
 R0
-R19
+R21
 !i10b 1
 !s100 UXXBaZT>WUPcf7O>J>=Gn3
 R2
-IDBS;Um1ZYj?GheY4`ogW?2
+Ijde4bm=lR4=c6[zgMP:U>2
 R3
 S1
 R4
-w1634572622
-8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/UART_rx.sv
-FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/UART_rx.sv
-!i122 16
-L0 1 99
 R5
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/UART_rx.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/UART_rx.sv
+!i122 56
+L0 1 99
+R6
 r1
 !s85 0
 31
-R20
-!s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/UART_rx.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/UART_rx.sv|
+R19
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/UART_rx.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/UART_rx.sv|
 !i113 1
-R7
 R8
+R9
 n@u@a@r@t_rx
 vUART_tx
 R0
-R19
+R21
 !i10b 1
 !s100 GBH6T2K=2zlgcn@Uo<D?42
 R2
-IhYFkYOE5g3h9<9hiEIAhI0
+Ig]2`;_<k9T9W8J<U8A5oj0
 R3
 S1
 R4
-w1634572571
-8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/UART_tx.sv
-FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/UART_tx.sv
-!i122 17
-L0 1 88
 R5
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/UART_tx.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/UART_tx.sv
+!i122 57
+L0 1 88
+R6
 r1
 !s85 0
 31
-R20
-!s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/UART_tx.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/UART_tx.sv|
+R22
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/UART_tx.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/UART_tx.sv|
 !i113 1
-R7
 R8
+R9
 n@u@a@r@t_tx
 vUART_warpper
 R0
-R19
+R21
 !i10b 1
 !s100 hOEbg@Alib21E3B=fHF<c2
 R2
-IYWBXX^^]_Y7aijef<T_Z32
+IGLa5VTB6K_FV]2N9^:n1;0
 R3
 S1
 R4
-w1636946769
-8C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/UART_wrapper.sv
-FC:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/UART_wrapper.sv
-!i122 18
-L0 1 78
 R5
+8C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/UART_wrapper.sv
+FC:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/UART_wrapper.sv
+!i122 58
+L0 1 78
+R6
 r1
 !s85 0
 31
-R20
-!s107 C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/UART_wrapper.sv|
-!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551 Final Project - Knight's Tour/src/UART_wrapper.sv|
+R22
+!s107 C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/UART_wrapper.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/src/UART_wrapper.sv|
 !i113 1
-R7
 R8
+R9
 n@u@a@r@t_warpper

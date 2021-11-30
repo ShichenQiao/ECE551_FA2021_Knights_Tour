@@ -1,3 +1,6 @@
+# Reading pref.tcl
+# OpenFile {C:/Users/13651/Desktop/ECE 551/ECE551_FA2021_Knights_Tour-main/ECE551_FA2021_Knights_Tour.mpf}
+# Loading project ECE551_FA2021_Knights_Tour
 # Compile of inertial_integrator.sv was successful.
 # Compile of IR_intf.sv was successful.
 # Compile of KnightPhysics.sv was successful.
@@ -9,7 +12,6 @@
 # Compile of MtrDrv.sv was successful.
 # Compile of PID.sv was successful.
 # Compile of RemoteComm.sv was successful.
-# Compile of reset_synch.sv was successful.
 # Compile of SPI_mnrch.sv was successful.
 # Compile of TourCmd.sv was successful.
 # Compile of TourLogic.sv was successful.
@@ -18,4 +20,6 @@
 # Compile of UART_tx.sv was successful.
 # Compile of UART_wrapper.sv was successful.
 # Compile of KnightsTour_tb.sv failed with 5 errors.
-# 20 compiles, 1 failed with 5 errors.
+# Compile of TourLogic_tb.sv was successful.
+# Compile of rst_synch.sv was successful.
+# 21 compiles, 1 failed with 5 errors.
