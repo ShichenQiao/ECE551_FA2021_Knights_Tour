@@ -162,36 +162,34 @@ module TourLogic(clk, rst_n, x_start, y_start, go, done, indx, move);
 	// Returns a packed byte of all the possible moves (at least in bound) moves given coordinates of Knight //
 	//////////////////////////////////////////////////////////////////////////////////////////////////////////
 	function [7:0] calc_poss(input [2:0] xpos,ypos);
-		logic bit0, bit1, bit2, bit3, bit4, bit5, bit6, bit7;
-		assign bit0 = (xpos >= 5'h01) && (ypos <= 5'h02);		// high when able to go (-1, 2)
-		assign bit1 = (xpos <= 5'h03) && (ypos <= 5'h02);		// high when able to go (1, 2)
-		assign bit2 = (xpos >= 5'h02) && (ypos <= 5'h03);		// high when able to go (-2, 1)
-		assign bit3 = (xpos >= 5'h02) && (ypos >= 5'h01);		// high when able to go (-2, -1)
-		assign bit4 = (xpos >= 5'h01) && (ypos >= 5'h02);		// high when able to go (-1, -2)
-		assign bit5 = (xpos <= 5'h03) && (ypos >= 5'h02);		// high when able to go (1, -2)
-		assign bit6 = (xpos <= 5'h02) && (ypos >= 5'h01);		// high when able to go (2, -1)
-		assign bit7 = (xpos <= 5'h02) && (ypos <= 5'h03);		// high when able to go (2, 1)
-		assign calc_poss = {bit7, bit6, bit5, bit4, bit3, bit2, bit1, bit0};
+		calc_poss = {(xpos <= 5'h02) && (ypos <= 5'h03), 		// high when able to go (2, 1)
+					 (xpos <= 5'h02) && (ypos >= 5'h01), 		// high when able to go (2, -1)
+					 (xpos <= 5'h03) && (ypos >= 5'h02), 		// high when able to go (1, -2)
+					 (xpos >= 5'h01) && (ypos >= 5'h02),		// high when able to go (-1, -2)
+					 (xpos >= 5'h02) && (ypos >= 5'h01),		// high when able to go (-2, -1)
+					 (xpos >= 5'h02) && (ypos <= 5'h03),		// high when able to go (-2, 1)
+					 (xpos <= 5'h03) && (ypos <= 5'h02),		// high when able to go (1, 2)
+					 (xpos >= 5'h01) && (ypos <= 5'h02)};		// high when able to go (-1, 2)
 	endfunction
 
 	///////////////////////////////////////////////////////////////////////////////////////////
 	// Returns the x-offset the Knight will move given the encoding of the move being tried //
 	/////////////////////////////////////////////////////////////////////////////////////////
 	function signed [2:0] off_x(input [7:0] try);
-		assign off_x = (try[6] | try[7]) ? 3'b010 :				// going right by 2
-					   (try[1] | try[5]) ? 3'b001 :				// going right by 1
-					   (try[0] | try[4]) ? 3'b111 :				// going left by 1
-					   3'b110;									// going left by 2
+		off_x = (try[6] | try[7]) ? 3'b010 :					// going right by 2
+				(try[1] | try[5]) ? 3'b001 :					// going right by 1
+				(try[0] | try[4]) ? 3'b111 :					// going left by 1
+				3'b110;											// going left by 2
 	endfunction
 
 	///////////////////////////////////////////////////////////////////////////////////////////
 	// Returns the y-offset the Knight will move given the encoding of the move being tried //
 	/////////////////////////////////////////////////////////////////////////////////////////
 	function signed [2:0] off_y(input [7:0] try);
-		assign off_y = (try[0] | try[1]) ? 3'b010 :				// going up by 2
-					   (try[2] | try[7]) ? 3'b001 :				// going up by 1
-					   (try[3] | try[6]) ? 3'b111 :				// going down by 1
-					   3'b110;									// going down by 2
+		off_y = (try[0] | try[1]) ? 3'b010 :					// going up by 2
+				(try[2] | try[7]) ? 3'b001 :					// going up by 1
+				(try[3] | try[6]) ? 3'b111 :					// going down by 1
+				3'b110;											// going down by 2
 	endfunction
   
 endmodule    
