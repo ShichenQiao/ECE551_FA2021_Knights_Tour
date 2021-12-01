@@ -1,0 +1,22 @@
+# Compile of inertial_integrator.sv was successful.
+# Compile of IR_intf.sv was successful.
+# Compile of KnightPhysics.sv was successful.
+# Compile of KnightsTour.sv was successful.
+# Compile of SPI_iNEMO4.sv was successful.
+# Compile of charge.sv was successful.
+# Compile of cmd_proc.sv was successful.
+# Compile of inert_intf.sv was successful.
+# Compile of MtrDrv.sv was successful.
+# Compile of PID.sv was successful.
+# Compile of PWM11.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of rst_synch.sv was successful.
+# Compile of SPI_mnrch.sv was successful.
+# Compile of TourCmd.sv was successful.
+# Compile of TourLogic.sv was successful.
+# Compile of UART.v was successful.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# Compile of KnightsTour_tb.sv failed with 5 errors.
+# 21 compiles, 1 failed with 5 errors.
