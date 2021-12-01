@@ -6,7 +6,7 @@ module KnightsTour(
   output lftPWM1,lftPWM2,				// left motor PWM controls
   output rghtPWM1,rghtPWM2,				// right motor PWM controls
   input RX,								// UART input from BLE module
-  input TX,								// UART output to BLE module
+  output TX,							// UART output to BLE module
   output piezo,piezo_n,					// to Piezo buzzer (charge fanfare)
   output IR_en,							// Enable 3 IR sensors (for 500usec once every 10ms)
   input lftIR_n,						// goes low if left IR encounters a rail

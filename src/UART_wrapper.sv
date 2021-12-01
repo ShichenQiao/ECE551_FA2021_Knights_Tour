@@ -1,13 +1,13 @@
 module UART_wrapper(
 	input clk, rst_n,		// clk and active low reset
 	input clr_cmd_rdy,		// knock down cmd_rdy when asserted
-	input trmt,				// start UART transmission when asserted
+	input send_resp,				// start UART transmission when asserted
 	input [7:0]resp,		// response byte to be sent from UART
 	input RX,				// UART RX data line
 	output TX,				// UART TX data line
 	output logic cmd_rdy,	// asserted when 16-bit command is ready
 	output [15:0]cmd,		// 16-bit command from the received 2 bytes
-	output tx_done			// asserted when UART transmission finished
+	output resp_sent		// asserted when UART transmission finished
 );
 
 	logic rx_rdy;				// asserted when UART rx data is ready
@@ -22,7 +22,7 @@ module UART_wrapper(
 	state_t state, nxt_state;
 	
 	// instantiate UART module
-	UART iUART(.clk(clk), .rst_n(rst_n), .RX(RX), .TX(TX), .rx_rdy(rx_rdy), .clr_rx_rdy(clr_rx_rdy), .rx_data(rx_data), .trmt(trmt), .tx_data(resp), .tx_done(tx_done));
+	UART iUART(.clk(clk), .rst_n(rst_n), .RX(RX), .TX(TX), .rx_rdy(rx_rdy), .clr_rx_rdy(clr_rx_rdy), .rx_data(rx_data), .trmt(send_resp), .tx_data(resp), .tx_done(resp_sent));
 	
 	// state register
 	always_ff @(posedge clk, negedge rst_n)
