@@ -1,4 +1,4 @@
-module UART_warpper(
+module UART_wrapper(
 	input clk, rst_n,		// clk and active low reset
 	input clr_cmd_rdy,		// knock down cmd_rdy when asserted
 	input trmt,				// start UART transmission when asserted
