@@ -13,8 +13,8 @@ module PID_tb();
 	
 	initial begin
 		clk = 0;
-		$readmemh("PID_stim.hex", stim);		// load data in PID_stim.hex into memory
-		$readmemh("PID_resp.hex", resp);		// load data in PID_resp.hex into memory
+		$readmemh("../lib/PID_stim.hex", stim);		// load data in PID_stim.hex into memory
+		$readmemh("../lib/PID_resp.hex", resp);		// load data in PID_resp.hex into memory
 		// loop throught all 2000 vectors
 		for(addr = 0; addr < 2000; addr = addr + 1) begin
 			@(posedge clk) #1;					// check responses 1 time unit after each posedge clk
