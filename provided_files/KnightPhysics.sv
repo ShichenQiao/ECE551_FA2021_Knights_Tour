@@ -53,7 +53,7 @@ module KnightPhysics(clk,RST_n,SS_n,SCLK,MISO,MOSI,INT,lftPWM1,lftPWM2,rghtPWM1,
   inverse_PWM11e iMTRR2(.clk(clk),.rst_n(RST_n),.PWM_sig(rghtPWM2),.duty_out(mtrR2),.vld()); 
 
   /////////////////////////////////////////////
-  // Next is modeling physics of MazeRunner //
+  // Next is modeling physics of The Knight //
   ///////////////////////////////////////////
   always @(posedge calc_physics) begin
     alpha_lft = alpha(mtrL1,mtrL2,omega_lft);		// angular accel direct to (duty - k*omega)
