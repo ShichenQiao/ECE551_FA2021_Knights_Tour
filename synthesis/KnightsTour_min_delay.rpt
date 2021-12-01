@@ -1,0 +1,51 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : KnightsTour
+Version: S-2021.06
+Date   : Tue Nov 30 22:00:54 2021
+****************************************
+
+Operating Conditions: tt0p85v25c   Library: saed32lvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: iNEMO/iINT/vld_ff1_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: iNEMO/iINT/yaw_scaled_reg[16]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  KnightsTour        16000                 saed32lvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  iNEMO/iINT/vld_ff1_reg/CLK (DFFARX1_LVT)                0.00       0.00 r
+  iNEMO/iINT/vld_ff1_reg/QN (DFFARX1_LVT)                 0.06       0.06 f
+  U2228/Y (AO222X1_LVT)                                   0.04       0.10 f
+  U3281/Y (NBUFFX2_LVT)                                   0.03       0.14 f
+  iNEMO/iINT/yaw_scaled_reg[16]/D (DFFX1_LVT)             0.01       0.14 f
+  data arrival time                                                  0.14
+
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.15       0.15
+  iNEMO/iINT/yaw_scaled_reg[16]/CLK (DFFX1_LVT)           0.00       0.15 r
+  library hold time                                       0.00       0.15
+  data required time                                                 0.15
+  --------------------------------------------------------------------------
+  data required time                                                 0.15
+  data arrival time                                                 -0.14
+  --------------------------------------------------------------------------
+  slack (VIOLATED: increase significant digits)                      0.00
+
+
+1
