@@ -6,7 +6,7 @@ module PID(
 	input [9:0] frwrd,						// summed with PID to form lft_spd,right_spd
 	output [10:0] lft_spd, rght_spd			// these form the input to mtr_drv
 );
-	localparam signed P_COEFF = 5'h08;
+	// localparam signed P_COEFF = 5'h08;
 	localparam signed D_COEFF = 6'h0B;
 
 	// P_term signals
@@ -16,10 +16,9 @@ module PID(
 	// I_term signals
 	logic signed [8:0] I_term;
 	logic signed [14:0] err_ext;			// sign extended, 15 bit version of err_sat
-	logic signed [14:0] nxt_integrator, integrator;			// The input and output to the integrator FF
+	logic signed [14:0] integrator;			// the integrator FF
 	logic signed [14:0] sum;				// the sum of err_ext and integrator
 	logic overflow;							// asserted when overflow occurs
-	logic freeze_n;							// mux selection input, freeze the integrator when low
 	
 	// D_term signals
 	logic signed [12:0] D_term;
@@ -30,6 +29,11 @@ module PID(
 	// PID block signals
 	logic signed [13:0] PID;				// sum of P_term, I_term, and D_term
 	logic signed [10:0] lft, rght;			// unsaturated lft and rght speeds
+		
+	//////////////////////////////////
+	// Free running pipeline flops //
+	////////////////////////////////
+
 
 	//////////////////////
 	// Generate P_term //
@@ -40,7 +44,7 @@ module PID(
 					 (!error[11] && |error[10:9]) ? 10'h1FF:
 					  error[9:0];
 
-	assign P_term = $signed(P_COEFF) * err_sat;
+	assign P_term = {err_sat[9], err_sat, 3'b000};			// P_term = err_sat * P_COEFF
 	
 	//////////////////////
 	// Generate I_term //
@@ -56,20 +60,14 @@ module PID(
 	assign overflow = ((~sum[14]) & integrator[14] & err_ext[14])
 					  |(sum[14] & (~integrator[14]) & (~err_ext[14]));
 					
-	// freeze the integrator when when err_vld is low or when overflow occurs
-	assign freeze_n = overflow ? 1'b0 : err_vld;
-
-	// get proper nxt_integrator value from the two muxes
-	assign nxt_integrator = (~moving) ? 15'h0000 :		// clear integrator when not moving
-							freeze_n  ? sum :			// use sum when moving, no overflow, and err_vld
-							integrator;					// freeze the integrator when freeze_n is low
-
 	// 15-bit wide integrator with active low reset
 	always_ff @(posedge clk, negedge rst_n)
 		if(!rst_n)
 			integrator <= 15'h0000;
-		else
-			integrator <= nxt_integrator;
+		else if(!moving)
+			integrator <= 15'h0000;
+		else if(err_vld && !overflow)
+			integrator <= sum;
 
 	// output the left-most 9 bits of the integrator as the I_term
 	assign I_term = integrator[14:6];
