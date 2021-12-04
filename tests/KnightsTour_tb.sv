@@ -141,20 +141,12 @@ module KnightsTour_tb();
 				  input logic [1:0] dir, 				// 0 to north, 1 to west, 2 to south, 3 to east
 				  input logic [3:0] num_of_square);		// used 4 bits for convinence, the real robot should only move 1 or 2 squares at a time
 		@(negedge clk);
-		if(fanfare)
-			case(dir)
-				2'b00:	cmd = {4'b0011, 8'h00, num_of_square};		// north
-				2'b01:	cmd = {4'b0011, 8'h3F, num_of_square};		// west
-				2'b10:	cmd = {4'b0011, 8'h7F, num_of_square};		// south
-				2'b11:	cmd = {4'b0011, 8'hBF, num_of_square};		// east
-			endcase
-		else
-			case(dir)
-				2'b00:	cmd = {4'b0011, 8'h00, num_of_square};		// north
-				2'b01:	cmd = {4'b0011, 8'h3F, num_of_square};		// west
-				2'b10:	cmd = {4'b0011, 8'h7F, num_of_square};		// south
-				2'b11:	cmd = {4'b0011, 8'hBF, num_of_square};		// east
-			endcase
+		case(dir)
+			2'b00:	cmd = {3'b001, fanfare, 8'h00, num_of_square};		// north
+			2'b01:	cmd = {3'b001, fanfare, 8'h3F, num_of_square};		// west
+			2'b10:	cmd = {3'b001, fanfare, 8'h7F, num_of_square};		// south
+			2'b11:	cmd = {3'b001, fanfare, 8'hBF, num_of_square};		// east
+		endcase
 		send_cmd = 1;
 		@(negedge clk) send_cmd = 0;
 	endtask
