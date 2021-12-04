@@ -13,7 +13,7 @@ module TourLogic(clk, rst_n, x_start, y_start, go, done, indx, move);
 	//////////////////////////////////////
 	logic visited[0:4][0:4];					// 2-D array of 1-bit boolean values that keep track of where on the board the knight has visited.
 	logic [7:0] last_move[0:23];				// 1-D array (of size 24) to keep track of last move taken from each move index
-	logic [7:0] possible_move[0:23];			// 1-D array (of size 24) to keep track of possible moves from each move index
+	//logic [7:0] possible_move[0:23];			// 1-D array (of size 24) to keep track of possible moves from each move index
 	logic [7:0] move_try;						// hold move would be tried next
 	logic [4:0] move_num;						// move number...when you have moved 24 times you are done.  Decrement when backing up
 	logic [2:0] xx, yy;							// represent the current x/y coordinates of the knight
@@ -76,9 +76,9 @@ module TourLogic(clk, rst_n, x_start, y_start, go, done, indx, move);
 	//////////////////////////////////////////////////////////////////
 	// Registers recording the possible moves from each move index //
 	////////////////////////////////////////////////////////////////
-	always_ff @(posedge clk)
-		if(find_possible)
-			possible_move[move_num] <= calc_poss(xx, yy);		// call function to find the packed vector about all possible moves the Knight has currently
+	//always_ff @(posedge clk)
+		//if(find_possible)
+			//possible_move[move_num] <= calc_poss(xx, yy);		// call function to find the packed vector about all possible moves the Knight has currently
 	
 	///////////////////////////////////////////////////////////////////
 	// Registers recording the last move taken from each move index //
@@ -130,7 +130,8 @@ module TourLogic(clk, rst_n, x_start, y_start, go, done, indx, move);
 					done = 1'b1;
 					nxt_state = IDLE;
 				end
-				else if((|(possible_move[move_num] & move_try)) 										// if the move being tried is possible
+				//else if((|(possible_move[move_num] & move_try))
+				else if((|(calc_poss(xx, yy) & move_try)) 										// if the move being tried is possible
 						&& ((visited[yy + off_y(move_try)][xx + off_x(move_try)]) == 0)) begin			// and has not been visited
 					update_position = 1'b1;						// notify the registers to go ahead with the current move_try
 					nxt_state = FIND;							// explore further moves we can take after the current try
