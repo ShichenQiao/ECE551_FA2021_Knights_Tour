@@ -53,11 +53,11 @@ module KnightPhysics(clk,RST_n,SS_n,SCLK,MISO,MOSI,INT,lftPWM1,lftPWM2,rghtPWM1,
   inverse_PWM11e iMTRR2(.clk(clk),.rst_n(RST_n),.PWM_sig(rghtPWM2),.duty_out(mtrR2),.vld()); 
 
   /////////////////////////////////////////////
-  // Next is modeling physics of The Knight //
+  // Next is modeling physics of MazeRunner //
   ///////////////////////////////////////////
   always @(posedge calc_physics) begin
-    alpha_lft = alpha(mtrL1,mtrL2,omega_lft);		// angular accel direct to (duty - k*omega)
 	alpha_rght = alpha(mtrR1,mtrR2,omega_rght);	// angular accel direct to (duty - k*omega)
+        alpha_lft = alpha(mtrL1,mtrL2,omega_lft);		// angular accel direct to (duty - k*omega)
 	omega_lft = omega(omega_lft,alpha_lft);		// angular velocity is integral of alpha
 	omega_rght = omega(omega_rght,alpha_rght);	// angular velocity is integral of alpha
 	omega_sum = omega_lft + omega_rght;             // if just pivoting this is near zero, positive when moving forward
@@ -70,106 +70,110 @@ module KnightPhysics(clk,RST_n,SS_n,SCLK,MISO,MOSI,INT,lftPWM1,lftPWM2,rghtPWM1,
 	//// Also models reflective gaurdrails (i.e. lftIR_n, rghtIR_n) ////
 	if ((omega_lft>$signed(16'd1000)) && (omega_rght>$signed(16'd1000))) begin // both wheels moving forward
 	  case (heading_robot[19:8]) inside
-	    [12'h3D8:12'h428] : begin		//  West
+	    [12'h3C8:12'h438] : begin		//  West
 		    xx = xx - omega_sum[16:13];
 			if (omega_sum>17'd22000)
 		      if (heading_robot[19:8]<12'h3FF) 		// north of pure west
 			    yy = (lftIR_n & rghtIR_n) ? yy + (8'h3F - heading_robot[19:12]) : 
-				     (~lftIR_n) ? yy + 1 : yy;
+				     (~lftIR_n) ? yy + 2 : yy;
 			  else									// south of pure west
 			    yy = (lftIR_n & rghtIR_n) ? yy - (heading_robot[19:12] - 8'h3F) : 
-				     (~rghtIR_n) ? yy - 1 : yy;
-			if (yy[11:0]>12'h8C0)
+				     (~rghtIR_n) ? yy - 2 : yy;
+			if ((yy[11:0]>12'h8C0) && (omega_sum>17'd22000))
 			  rghtIR_n = 0;
 			else
 			  rghtIR_n = 1;
-			if (yy[11:0]<12'h740)
+			if ((yy[11:0]<12'h740) && (omega_sum>17'd22000))
 			  lftIR_n = 0;
 			else
 			  lftIR_n = 1;
 		  end
-		[12'hBD8:12'hC28] : begin		//  East
+		[12'hBC8:12'hC38] : begin		//  East
 		    xx = xx + omega_sum[16:13];
 			if (omega_sum>17'd22000)
 		      if (heading_robot[19:8]<12'hBFF) 		// south of pure east
 			    yy = (lftIR_n & rghtIR_n) ? yy - (8'hBF - heading_robot[19:12]) :
-                     (~lftIR_n) ? yy - 1 : yy;
+                     (~lftIR_n) ? yy - 2 : yy;
 			  else									// north of pure east
 			    yy = (lftIR_n & rghtIR_n) ? yy + (heading_robot[19:12] - 8'hBF) :
-                     (~rghtIR_n) ? yy + 1 :	yy;
-			if (yy[11:0]>12'h8C0)
+                     (~rghtIR_n) ? yy + 2 :	yy;
+			if ((yy[11:0]>12'h8F0) && (omega_sum>17'd22000))   
 			  lftIR_n = 0;
 			else
 			  lftIR_n = 1;
-			if (yy[11:0]<12'h740)
+			if ((yy[11:0]<12'h710) && (omega_sum>17'd22000))
 			  rghtIR_n = 0;
 			else
 			  rghtIR_n = 1;
 		  end
-		[12'h7D8:12'h7FF] : begin		// west of pure south
+		[12'h7C8:12'h7FF] : begin		// west of pure south
 		  yy = yy - omega_sum[16:13];
 			if (omega_sum>17'd22000)
 			  xx = (lftIR_n & rghtIR_n) ? xx - (8'h7F - heading_robot[19:12]) :
-                   (~lftIR_n) ? xx - 1 : xx;
-			if (xx[11:0]>12'h8C0)
+                   (~lftIR_n) ? xx - 2 : xx;
+			if ((xx[11:0]>12'h8F0) && (omega_sum>17'd22000))
 			  lftIR_n = 0;
 			else
 			  lftIR_n = 1;
-			if (xx[11:0]<12'h740)
+			if ((xx[11:0]<12'h710) && (omega_sum>17'd22000))
 			  rghtIR_n = 0;
 			else
 			  rghtIR_n = 1;
           end
-		[12'h800:12'h828] : begin		// east of pure south
+		[12'h800:12'h838] : begin		// east of pure south
 		  yy = yy - omega_sum[16:13];
 			if (omega_sum>17'd22000)
 			  xx = (lftIR_n & rghtIR_n) ? xx + (heading_robot[19:12] - 8'h80) :
-                   (~rghtIR_n) ? xx + 1	: xx;
-			if (xx[11:0]>12'h8C0)
+                   (~rghtIR_n) ? xx + 2	: xx;
+			if ((xx[11:0]>12'h8F0) && (omega_sum>17'd22000))
 			  lftIR_n = 0;
 			else
 			  lftIR_n = 1;
-			if (xx[11:0]<12'h740)
+			if ((xx[11:0]<12'h710) && (omega_sum>17'd22000))
 			  rghtIR_n = 0;
 			else
 			  rghtIR_n = 1;
           end		  
-		[12'h000:12'h028] : begin						// west of pure north
+		[12'h000:12'h038] : begin						// west of pure north
 		    yy = yy + omega_sum[16:13];
 			if (omega_sum>17'd22000)
 			  xx = (lftIR_n & rghtIR_n) ? xx - heading_robot[19:12] :
-                   (~rghtIR_n) ? xx - 1 : xx;
-			if (xx[11:0]>12'h8C0)
+                   (~rghtIR_n) ? xx - 2 : xx;
+			if ((xx[11:0]>12'h8F0) && (omega_sum>17'd22000))
 			  rghtIR_n = 0;
 			else
 			  rghtIR_n = 1;
-			if (xx[11:0]<12'h740)
+			if ((xx[11:0]<12'h710) && (omega_sum>17'd22000))
 			  lftIR_n = 0;
 			else
 			  lftIR_n = 1;
 		  end
-		[12'hFD8:12'hFFF] : begin						// east of pure north
+		[12'hFC8:12'hFFF] : begin						// east of pure north
 		    yy = yy + omega_sum[16:13];
 			if (omega_sum>17'd22000)
 			  xx = (lftIR_n & rghtIR_n) ? xx - {{9{heading_robot[19]}},heading_robot[19:12]} :
-                   (~lftIR_n) ? xx + 1 : xx;
-			if (xx[11:0]>12'h8C0)
+                   (~lftIR_n) ? xx + 2 : xx;
+			if ((xx[11:0]>12'h8F0) && (omega_sum>17'd22000))
 			  rghtIR_n = 0;
 			else
 			  rghtIR_n = 1;
-			if (xx[11:0]<12'h740)
+			if ((xx[11:0]<12'h710) && (omega_sum>17'd22000))
 			  lftIR_n = 0;
 			else
 			  lftIR_n = 1;
 		  end
 		default : $display("PHYS ERR: not traveling orthogonal direction");
 	  endcase
+	end else begin     // if wheels are not moving forward don't assert lft/rght IR's
+	  lftIR_n = 1'b1;
+	  rghtIR_n = 1'b1;
 	end
+
 	
 	///////// Model center line crossings as function of lower 12-bits of xx/yy ///////
-	if (((xx[11:0]>12'h340) && (xx[11:0]<12'h3C0)) ||  ((xx[11:0]>12'hBC0) && (xx[11:0]<12'hC40))) 
+	if (((xx[11:0]>12'h3E0) && (xx[11:0]<12'h460)) ||  ((xx[11:0]>12'hBA0) && (xx[11:0]<12'hC20))) 
 	  cntrIR_n = 1'b0;
-	else if (((yy[11:0]>12'h340) && (yy[11:0]<12'h3C0)) ||  ((yy[11:0]>12'hBC0) && (yy[11:0]<12'hC40)))
+	else if (((yy[11:0]>12'h3E0) && (yy[11:0]<12'h460)) ||  ((yy[11:0]>12'hBA0) && (yy[11:0]<12'hC20)))
 	  cntrIR_n = 1'b0;
 	else
 	  cntrIR_n = 1'b1;	  
@@ -180,8 +184,8 @@ module KnightPhysics(clk,RST_n,SS_n,SCLK,MISO,MOSI,INT,lftPWM1,lftPWM2,rghtPWM1,
 	omega_lft = 16'h0000;
 	omega_rght = 16'h0000;
 	heading_robot = 16'h0000;
-	xx = 15'h2800;	// start in center of board
-	yy = 15'h2800;	// start in center of board
+	xx = 15'h2800;	// start on left 
+	yy = 15'h2800;	// top corner (0,4) 
 	lftIR_n = 1;
 	cntrIR_n = 1;
 	rghtIR_n = 1;
@@ -196,11 +200,15 @@ module KnightPhysics(clk,RST_n,SS_n,SCLK,MISO,MOSI,INT,lftPWM1,lftPWM2,rghtPWM1,
     reg [11:0] mag;
 	reg [11:0] mag_shaped;
 	reg [12:0] torque;
+	reg [13:0] alpha14bit;
 
     mag = (duty1>duty2) ? duty1 - duty2 : duty2 - duty1;
 	mag_shaped = $sqrt(real'({mag,12'h000}));
-    torque = (duty1>duty2) ? mag_shaped : -mag_shaped;
-	alpha = torque - {omega1[15],omega1[15:4]} - {{3{omega1[15]}},omega1[15:6]};
+    torque = (duty1>duty2) ? mag_shaped : -{1'b0,mag_shaped};
+	alpha14bit = {torque[12],torque} - {{2{omega1[15]}},omega1[15:4]} - {{4{omega1[15]}},omega1[15:6]};
+        alpha = (alpha14bit[13]&~alpha14bit[12]) ? 13'h1000 :
+	        (~alpha14bit[13]&alpha14bit[12]) ? 13'h0FFF :
+		alpha14bit[12:0];
 
   endfunction
  
