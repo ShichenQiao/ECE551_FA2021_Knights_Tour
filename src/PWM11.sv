@@ -4,30 +4,29 @@ module PWM11(
 	output logic PWM_sig, PWM_sig_n		// PWM signal out
 );
 
-logic [10:0]cnt;			// output from counter FF
-logic nxt_PWM_sig;			// input to PWM FF
+	logic [10:0]cnt;			// output from counter FF
+	logic PWM_high;			// input to PWM FF
 
-// 11-bit unsigned counter FF, count from 0 to 2047 with roll overs
-always_ff @(posedge clk, negedge rst_n)
-	if(!rst_n)
-		cnt <= 11'h000;
-	else
-		cnt <= cnt + 1;
-		
-// next PWM should be high when cnt < duty, otherwise low
-assign nxt_PWM_sig = (cnt < duty) ? 1 : 0;
+	// 11-bit unsigned counter FF, count from 0 to 2047 with roll overs
+	always_ff @(posedge clk, negedge rst_n)
+		if(!rst_n)
+			cnt <= 11'h000;
+		else
+			cnt <= cnt + 1;
+			
+	// next PWM should be high when cnt < duty, otherwise low
+	assign PWM_high = (cnt < duty);
 
-// PWM FF
-always_ff @(posedge clk, negedge rst_n)
-	if(!rst_n)
-		PWM_sig <= 0;
-	else
-		if(nxt_PWM_sig)
+	// PWM FF
+	always_ff @(posedge clk, negedge rst_n)
+		if(!rst_n)
+			PWM_sig <= 0;
+		else if(PWM_high)
 			PWM_sig <= 1;
 		else
 			PWM_sig <= 0;
-		
-// generate PWM_sig_n from PWM_sig
-not iNOT(PWM_sig_n, PWM_sig);
+			
+	// generate PWM_sig_n from PWM_sig
+	not iNOT(PWM_sig_n, PWM_sig);
 
 endmodule

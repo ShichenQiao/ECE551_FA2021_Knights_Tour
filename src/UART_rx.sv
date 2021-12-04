@@ -47,7 +47,7 @@ module UART_rx(
 		else if(receiving)
 			baud_cnt <= baud_cnt - 1;		// count up when transmitting
 
-	assign shift = baud_cnt == 12'h000;		// assert shift when baud_cnt reaches 0
+	assign shift = (baud_cnt == 12'h000);		// assert shift when baud_cnt reaches 0
 
 	// the bit counter
 	always_ff @(posedge clk)
@@ -91,9 +91,9 @@ module UART_rx(
 	always_ff @(posedge clk, negedge rst_n)
 		if(!rst_n)
 			rdy <= 1'b0;
-		else
-			if(set_rdy & ~(start | clr_rdy)) rdy <= 1'b1;
-			else if(~set_rdy & (start | clr_rdy)) rdy <= 1'b0;
-			else if(set_rdy & (start | clr_rdy)) rdy <= 1'b1;		// chose to set when both SR are high, however, should never happen!
+		else if(start | clr_rdy)
+			rdy <= 1'b0;
+		else if(set_rdy)
+			rdy <= 1'b1;
 
 endmodule

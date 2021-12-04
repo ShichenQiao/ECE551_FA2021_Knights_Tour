@@ -36,7 +36,7 @@ module UART_tx(
 		else if(transmitting)
 			baud_cnt <= baud_cnt + 1;		// count up when transmitting
 
-	assign shift = baud_cnt == 12'd2604;		// assert shift when baud_cnt reaches 2604 clks
+	assign shift = (baud_cnt == 12'd2604);		// assert shift when baud_cnt reaches 2604 clks
 
 	// the bit counter
 	always_ff @(posedge clk)
@@ -80,9 +80,9 @@ module UART_tx(
 	always_ff @(posedge clk, negedge rst_n)
 		if(!rst_n)
 			tx_done <= 1'b0;
-		else
-			if(set_done & ~init) tx_done <= 1'b1;
-			else if(~set_done & init) tx_done <= 1'b0;
-			else if(set_done & init) tx_done <= 1'b1;		// chose to set when both SR are high, however, should never happen!
+		else if(init)
+			tx_done <= 1'b0;
+		else if(set_done)
+			tx_done <= 1'b1;
 
 endmodule
