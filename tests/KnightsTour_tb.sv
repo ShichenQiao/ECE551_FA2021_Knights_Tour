@@ -57,7 +57,7 @@ module KnightsTour_tb();
 		
 		// test calibration
 		@(posedge clk);
-		send_cmd_to_DUT(16'h0000);
+		calibrate_DUT();
 		wait4sig(iDUT.cal_done, 1000000);
 		wait4sig(resp_rdy, 1000000);
 		if(resp !== 8'hA5) begin
@@ -65,32 +65,37 @@ module KnightsTour_tb();
 			$stop();
 		end
 		
+		print_cordinates();
+		
 		// Test: go north by 1 square
-		//send_cmd_to_DUT({4'b0010, 8'h00, 4'h1});
-		//wait4sig(resp_rdy, 10000000);
+		move_DUT(1'b0, 2'b00, 4'h1);
+		wait4sig(resp_rdy, 10000000);
+		
+		print_cordinates();
 		
 		// Test: go west by 1 square
-		//send_cmd_to_DUT({4'b0010, 8'h3F, 4'h1});
-		//wait4sig(resp_rdy, 10000000);
+		move_DUT(1'b0, 2'b01, 4'h1);
+		wait4sig(resp_rdy, 10000000);
+		
+		print_cordinates();
 		
 		// Test: go south by 1 square
-		//send_cmd_to_DUT({4'b0010, 8'h7F, 4'h1});
-		//wait4sig(resp_rdy, 10000000);
+		move_DUT(1'b0, 2'b10, 4'h1);
+		wait4sig(resp_rdy, 10000000);
+		
+		print_cordinates();
 		
 		// Test: go east by 1 square
-		//send_cmd_to_DUT({4'b0010, 8'hBF, 4'h1});
-		//wait4sig(resp_rdy, 10000000);
+		move_DUT(1'b0, 2'b11, 4'h1);
+		wait4sig(resp_rdy, 10000000);
 		
-		// Test: go north by 2 square
-		//repeat(150000)@(posedge clk);
-		//send_cmd_to_DUT({4'b0010, 8'h00, 4'h2});
-		//wait4sig(resp_rdy, 10000000);
+		print_cordinates();
 		
 		// Test: start tour from the center
-		send_cmd_to_DUT(16'b0100_0000_0010_0010);
-		wait4sig(resp_rdy, 10000000);
-		wait4sig(resp_rdy, 10000000);
-		wait4sig(resp_rdy, 10000000);
+		//send_cmd_to_DUT(16'b0100_0000_0010_0010);
+		//wait4sig(resp_rdy, 10000000);
+		//wait4sig(resp_rdy, 10000000);
+		//wait4sig(resp_rdy, 10000000);
 		
 		repeat(10) @(posedge clk);
 		$display("YAHOO! All test passed! Justin Qiao is unstoppable! ");
@@ -121,9 +126,36 @@ module KnightsTour_tb();
 		@(negedge clk) RST_n = 1;
 	endtask
 	
-	task send_cmd_to_DUT(input logic [15:0] cmd_to_send);
-		@(negedge clk) cmd = cmd_to_send;
-		@(negedge clk) send_cmd = 1;
+	task calibrate_DUT();
+		@(negedge clk);
+		cmd = 16'h0000;
+		send_cmd = 1;
+		@(negedge clk) send_cmd = 0;
+	endtask
+	
+	task print_cordinates();
+		$display("The Knights is now at (%.2f, %.2f)", iPHYS.xx/4096.0, iPHYS.yy/4096.0);
+	endtask
+	
+	task move_DUT(input logic fanfare,					// 1 to move with fanfare, 0 to move without
+				  input logic [1:0] dir, 				// 0 to north, 1 to west, 2 to south, 3 to east
+				  input logic [3:0] num_of_square);		// used 4 bits for convinence, the real robot should only move 1 or 2 squares at a time
+		@(negedge clk);
+		if(fanfare)
+			case(dir)
+				2'b00:	cmd = {4'b0011, 8'h00, num_of_square};		// north
+				2'b01:	cmd = {4'b0011, 8'h3F, num_of_square};		// west
+				2'b10:	cmd = {4'b0011, 8'h7F, num_of_square};		// south
+				2'b11:	cmd = {4'b0011, 8'hBF, num_of_square};		// east
+			endcase
+		else
+			case(dir)
+				2'b00:	cmd = {4'b0011, 8'h00, num_of_square};		// north
+				2'b01:	cmd = {4'b0011, 8'h3F, num_of_square};		// west
+				2'b10:	cmd = {4'b0011, 8'h7F, num_of_square};		// south
+				2'b11:	cmd = {4'b0011, 8'hBF, num_of_square};		// east
+			endcase
+		send_cmd = 1;
 		@(negedge clk) send_cmd = 0;
 	endtask
 		
