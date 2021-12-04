@@ -90,6 +90,7 @@ module KnightsTour_tb();
 		send_cmd_to_DUT(16'b0100_0000_0010_0010);
 		wait4sig(resp_rdy, 10000000);
 		wait4sig(resp_rdy, 10000000);
+		wait4sig(resp_rdy, 10000000);
 		
 		repeat(10) @(posedge clk);
 		$display("YAHOO! All test passed! Justin Qiao is unstoppable! ");
