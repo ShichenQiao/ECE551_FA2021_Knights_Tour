@@ -72,20 +72,20 @@ module KnightsTour_tb();
 		
 		print_cordinates(iPHYS.xx, iPHYS.yy);
 		
-		// Test: go west by 1 square
-		move_DUT(1'b0, 2'b01, 4'h1, clk, cmd, send_cmd);
+		// Test: go west by 2 square
+		move_DUT(1'b0, 2'b01, 4'h2, clk, cmd, send_cmd);
 		wait4sig(resp_rdy, 10000000, clk);
 		
 		print_cordinates(iPHYS.xx, iPHYS.yy);
 		
-		// Test: go south by 1 square
-		move_DUT(1'b0, 2'b10, 4'h1, clk, cmd, send_cmd);
+		// Test: go south by 1 square with fanfare
+		move_DUT(1'b1, 2'b10, 4'h1, clk, cmd, send_cmd);
 		wait4sig(resp_rdy, 10000000, clk);
 		
 		print_cordinates(iPHYS.xx, iPHYS.yy);
 		
-		// Test: go east by 1 square
-		move_DUT(1'b0, 2'b11, 4'h1, clk, cmd, send_cmd);
+		// Test: go east by 2 square with fanfare
+		move_DUT(1'b1, 2'b11, 4'h2, clk, cmd, send_cmd);
 		wait4sig(resp_rdy, 10000000, clk);
 		
 		print_cordinates(iPHYS.xx, iPHYS.yy);
