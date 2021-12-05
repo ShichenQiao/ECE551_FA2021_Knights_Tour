@@ -140,17 +140,17 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 				moving_vert = 1'b1;			// indicate moving vertically
 				cmd_rdy_tour_logic = 1'b1;	// indicate vertical move cmd from tour logic is ready
 				if(clr_cmd_rdy)
-					nxt_state = HOLD1;
+					nxt_state = HOLD2;
 			end
 			HOLD1: begin
 				moving_vert = 1'b1;			// still moving vertically, but cmd_rdy was knocked down at this stage
 				if(send_resp)
-					nxt_state = HORI;
+					nxt_state = VERT;
 			end
 			HORI: begin
 				cmd_rdy_tour_logic = 1'b1;	// indicate horizontal move cmd from tour logic is ready
 				if(clr_cmd_rdy)
-					nxt_state = HOLD2;
+					nxt_state = HOLD1;
 			end
 			HOLD2: begin
 				if(mv_indx == 8'd23)
@@ -159,8 +159,8 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 					if(mv_indx == 8'd23)	
 						nxt_state = IDLE;	// go back to IDLE if all 24 moves finished
 					else begin
-						nxt_indx = 1'b1;	// otherwise, increment mv_indx by 1 and go back to move vertically
-						nxt_state = VERT;
+						nxt_indx = 1'b1;	// otherwise, increment mv_indx by 1 and go back to move horizontally
+						nxt_state = HORI;
 					end
 			end
 			default: begin			// is IDLE
@@ -168,7 +168,7 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 				cmd_from_UART = 1'b1;		// indicate that cmd is from UART
 				if(start_tour) begin		// when Tour Logic finish calculations, start to move
 					clr_indx = 1'b1;		// zero mv_indx counter
-					nxt_state = VERT;
+					nxt_state = HORI;
 				end
 			end
 		endcase
