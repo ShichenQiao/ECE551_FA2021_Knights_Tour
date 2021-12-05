@@ -25,7 +25,7 @@ module KnightsTour(
   wire signed [10:0] lft_spd, rght_spd;	// signed motor controls
   wire signed [11:0] error;
   wire signed [11:0] heading;
-  wire lftIR,cntrIR,rghtIR;				// sampled IR signals
+  logic lftIR,cntrIR,rghtIR;			// sampled IR signals
   wire heading_rdy;						// new heading reading is ready
   wire moving;							// clear I in PID and don't integrate yaw if not moving
   wire send_resp;						// send either 0xA5 (done) or 0x5A (in progress)

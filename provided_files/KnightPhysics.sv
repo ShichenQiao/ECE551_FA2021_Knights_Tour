@@ -30,7 +30,7 @@ module KnightPhysics(clk,RST_n,SS_n,SCLK,MISO,MOSI,INT,lftPWM1,lftPWM2,rghtPWM1,
   reg signed [19:0] heading_robot;				// angular orientation of robot (starts at zero) integration of heading_v
   reg [6:0] rand_err;
   reg signed [15:0] gyro_err;
-  reg [14:0] xx,yy;  						// board coordinates with 4096X multiplier
+  logic [14:0] xx,yy;  						// board coordinates with 4096X multiplier
   
   /////////////////////////////////////////////
   // Declare internal signals between units //
