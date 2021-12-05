@@ -1,6 +1,6 @@
 module KnightsTour_tb();
 
-	//<< import or include tasks?>>
+	// import tb_tasks package
 	import tb_tasks::*;
 
 	/////////////////////////////
@@ -47,7 +47,6 @@ module KnightsTour_tb();
 					  .lftIR_n(lftIR_n),.rghtIR_n(rghtIR_n),.cntrIR_n(cntrIR_n)); 
 				   
 	initial begin
-	
 		clk = 0;
 		
 		// test reset
