@@ -38,7 +38,7 @@ module KnightsTour(
   wire clr_cmd_rdy;
   wire tour_go;
   wire fanfare_go;
-  wire start_tour;						// done from TourLogic
+  logic start_tour;						// done from TourLogic
   wire [4:0] mv_indx;					// "address" of tour move
   wire [7:0] move;						// 1-hot encoded Knight move
   wire [7:0] resp;						// either 0xA5 (done), or 0x5A (in progress)

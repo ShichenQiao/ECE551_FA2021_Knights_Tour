@@ -24,7 +24,7 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 	logic move_vert_two, move_hori_two;		// high when moving two squares, low when moving one
 	logic move_vert_up, move_hori_right;	// high when moving up/right, low when moving down/left, respectively
 	
-	typedef enum logic [2:0] {IDLE, VERT, HOLD1, HORI, HOLD2} state_t;
+	typedef enum logic [2:0] {IDLE, HORI, HOLD1, VERT, HOLD2} state_t;
 	state_t state, nxt_state;
 	
 	///////////////////
@@ -90,19 +90,19 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 	end
 	
 	//////////////////////////////////////////////////////////////////////////////////
-	// generate cmd and cmd_rdy (Note: moving vertically first, then horizontally) //
+	// generate cmd and cmd_rdy (Note: moving horizontally first, then vertically) //
 	////////////////////////////////////////////////////////////////////////////////
 	// generate proper cmd for vertical moves according to decoded flag variables, move_vert_up and move_vert_two
-	assign cmd_vert = move_vert_up ? (move_vert_two ? {4'b0010, 8'h00, 4'h2} :
-													  {4'b0010, 8'h00, 4'h1}):
-									 (move_vert_two ? {4'b0010, 8'h7F, 4'h2} :
-									 				  {4'b0010, 8'h7F, 4'h1});
+	assign cmd_vert = move_vert_up ? (move_vert_two ? {4'b0011, 8'h00, 4'h2} :
+													  {4'b0011, 8'h00, 4'h1}):
+									 (move_vert_two ? {4'b0011, 8'h7F, 4'h2} :
+									 				  {4'b0011, 8'h7F, 4'h1});
 													  
 	// generate proper cmd for horizontal moves according to decoded flag variables, move_hori_right and move_hori_two											  
-	assign cmd_hori = move_hori_right ? (move_hori_two ? {4'b0011, 8'hBF, 4'h2} :
-														 {4'b0011, 8'hBF, 4'h1}):
-										(move_hori_two ? {4'b0011, 8'h3F, 4'h2} :
-														 {4'b0011, 8'h3F, 4'h1});
+	assign cmd_hori = move_hori_right ? (move_hori_two ? {4'b0010, 8'hBF, 4'h2} :
+														 {4'b0010, 8'hBF, 4'h1}):
+										(move_hori_two ? {4'b0010, 8'h3F, 4'h2} :
+														 {4'b0010, 8'h3F, 4'h1});
 	
 	// select proper cmd for cmd_tour_logic
 	assign cmd_tour_logic = moving_vert ? cmd_vert : cmd_hori;
@@ -136,21 +136,21 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 		nxt_state = state;
 		
 		case(state)
-			VERT: begin
-				moving_vert = 1'b1;			// indicate moving vertically
-				cmd_rdy_tour_logic = 1'b1;	// indicate vertical move cmd from tour logic is ready
+			HORI: begin
+				cmd_rdy_tour_logic = 1'b1;	// indicate horizontal move cmd from tour logic is ready
 				if(clr_cmd_rdy)
-					nxt_state = HOLD2;
+					nxt_state = HOLD1;
 			end
 			HOLD1: begin
 				moving_vert = 1'b1;			// still moving vertically, but cmd_rdy was knocked down at this stage
 				if(send_resp)
 					nxt_state = VERT;
 			end
-			HORI: begin
-				cmd_rdy_tour_logic = 1'b1;	// indicate horizontal move cmd from tour logic is ready
+			VERT: begin
+				moving_vert = 1'b1;			// indicate moving vertically
+				cmd_rdy_tour_logic = 1'b1;	// indicate vertical move cmd from tour logic is ready
 				if(clr_cmd_rdy)
-					nxt_state = HOLD1;
+					nxt_state = HOLD2;
 			end
 			HOLD2: begin
 				if(mv_indx == 8'd23)

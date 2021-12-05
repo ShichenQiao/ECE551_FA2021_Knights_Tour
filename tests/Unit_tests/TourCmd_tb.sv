@@ -35,8 +35,8 @@ module TourCmd_tb();
 		for(int i = 0; i < 24; i++) begin		// go through all 24 "moves"
 			repeat(10)@(posedge clk);
 			//@(posedge cmd_rdy);				// wait for cmd_rdy from TourCmd
-			if(cmd !== 16'b0010_0000_0000_0010) begin 			// move command with fanfare. Move up 2 squares.
-				$display("Error: failed to move up by 2 squares");
+			if(cmd !== 16'b0010_1011_1111_0001) begin 			// move command without fanfare. Move east 1 squares.
+				$display("Error: failed to move east by 1 square");
 				$stop();
 			end
 			@(negedge clk) clr_cmd_rdy = 1;		// knock down cmd_rdy and go to the HOLD1 state
@@ -52,8 +52,8 @@ module TourCmd_tb();
 			
 			repeat(10)@(posedge clk);
 			//@(posedge cmd_rdy); 				//wait for cmd_rdy from TourCmd
-			if(cmd !== 16'b0011_1011_1111_0001) begin 			//move command with fanfare. Move to the right 1 squares.
-				$display("Error: failed to move right by 1 square");
+			if(cmd !== 16'b0011_0000_0000_0010) begin 			//move command with fanfare. Move to north 2 squares.
+				$display("Error: failed to move north by 2 square");
 				$stop();
 			end
 			
