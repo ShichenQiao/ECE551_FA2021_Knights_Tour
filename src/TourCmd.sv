@@ -80,11 +80,11 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 				move_hori_two = 1'b1;
 				move_hori_right = 1'b1;
 			end
-			default: begin
-				move_vert_up = 1'b0;
-				move_vert_two = 1'b0;
-				move_hori_right = 1'b0;
-				move_hori_two = 1'b0;
+			default: begin					// don't care if move invalid
+				move_vert_up = 1'bx;
+				move_vert_two = 1'bx;
+				move_hori_right = 1'bx;
+				move_hori_two = 1'bx;
 			end
 		endcase
 	end
