@@ -1,0 +1,283 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+!s11f vlog 2021.2_2 2021.06, Jun 19 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 d/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/vsim
+T_opt
+!s110 1638741702
+V?0jDF_H_?Dcl`@mRQJD3m0
+Z2 04 14 4 work KnightsTour_tb fast 0
+=1-000ae431a4f1-61ad36c5-c13a4-1a5b
+Z3 !s124 OEM100
+o-quiet -auto_acc_if_foreign -work work -L /filespace/s/sqiao6/ece551/SAED32_lib +acc
+Z4 tCvgOpt 0
+n@_opt
+Z5 OE;O;2021.2_2;73
+R1
+T_opt1
+!s110 1638761521
+VGBWA91U?l9bb_cKHjnib01
+R2
+=6-000ae431a4f1-61ad8430-c7ea9-5c12
+R3
+o-quiet -auto_acc_if_foreign -work work -L /filespace/s/sqiao6/ece551/SAED32_lib
+R4
+n@_opt1
+R5
+vinverse_PWM11e
+Z6 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z7 !s110 1638761318
+!i10b 1
+!s100 bO[nVcTD8:;QVJDJNVTfb3
+IGQ@TdC:fiV09W1T@V62[D2
+S1
+Z8 d/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation
+Z9 w1638756778
+Z10 8/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightPhysics.sv
+Z11 F/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightPhysics.sv
+!i122 49
+L0 259 49
+Z12 VDg1SIo80bB@j0V0VzS_@n1
+Z13 OE;L;2021.2_2;73
+r1
+!s85 0
+31
+Z14 !s108 1638761318.000000
+Z15 !s107 /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightPhysics.sv|
+Z16 !s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightPhysics.sv|
+!i113 0
+Z17 o-work work -sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+ninverse_@p@w@m11e
+vKnightPhysics
+R6
+R7
+!i10b 1
+!s100 dQ>D><83Ok4n0;EXzC=nm1
+I_3G6JfAki=O^]cg7I>cIC2
+S1
+R8
+R9
+R10
+R11
+!i122 49
+L0 2 253
+R12
+R13
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 0
+R17
+R4
+n@knight@physics
+vKnightsTour
+Z18 !s110 1638761317
+!i10b 1
+!s100 `UELeeR9zP@242=hPiHHo0
+I:QiGBkhE9]GnSVELCO@>e3
+R8
+w1638760784
+8/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightsTour.vg
+F/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightsTour.vg
+!i122 41
+L0 8 6241
+R12
+R13
+r1
+!s85 0
+31
+!s108 1638761316.000000
+!s107 /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightsTour.vg|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightsTour.vg|
+!i113 0
+Z19 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R4
+n@knights@tour
+vKnightsTour_tb
+R6
+DXx4 work 8 tb_tasks 0 22 JK@H5zGZi:16WYF_kclVP2
+!s110 1638761516
+!i10b 1
+!s100 S>JCOUjc7FY]R=W=gXFHD2
+I?QWcMOO]67fSe90Pcg01j1
+S1
+R8
+w1638761509
+8/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightsTour_tb.sv
+F/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightsTour_tb.sv
+!i122 50
+L0 2 78
+R12
+R13
+r1
+!s85 0
+31
+!s108 1638761516.000000
+!s107 /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightsTour_tb.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightsTour_tb.sv|
+!i113 0
+R17
+R4
+n@knights@tour_tb
+vRemoteComm
+R6
+R18
+!i10b 1
+!s100 1HV8zMj4;Ald4[;fY`CMA0
+I7]29dzzH5WFkGReASM6fe0
+S1
+R8
+Z20 w1638756779
+8/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/RemoteComm.sv
+F/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/RemoteComm.sv
+!i122 44
+L0 2 86
+R12
+R13
+r1
+!s85 0
+31
+Z21 !s108 1638761317.000000
+!s107 /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/RemoteComm.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/RemoteComm.sv|
+!i113 0
+R17
+R4
+n@remote@comm
+vSPI_iNEMO4
+R6
+R18
+!i10b 1
+!s100 igVcUhSibTbS98f?^85:Y1
+IPO<1k`gFhHmLAfLdJ<J6;0
+S1
+R8
+R20
+8/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/SPI_iNEMO4.sv
+F/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/SPI_iNEMO4.sv
+!i122 45
+L0 2 196
+R12
+R13
+r1
+!s85 0
+31
+R21
+!s107 /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/SPI_iNEMO4.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/SPI_iNEMO4.sv|
+!i113 0
+R17
+R4
+n@s@p@i_i@n@e@m@o4
+Xtb_tasks
+R6
+R18
+!i10b 1
+!s100 :@R>BJ;QOJgS8HDScI`hj3
+IJK@H5zGZi:16WYF_kclVP2
+S1
+R8
+R20
+8/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/tb_tasks.sv
+F/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/tb_tasks.sv
+!i122 43
+L0 3 0
+VJK@H5zGZi:16WYF_kclVP2
+R13
+r1
+!s85 0
+31
+R21
+!s107 /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/tb_tasks.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/tb_tasks.sv|
+!i113 0
+R17
+R4
+vUART
+R18
+!i10b 1
+!s100 =K<aWClFj<FIP<YPDGX6U3
+IGDXX9f9BcamFY[gcGbQ9z1
+R8
+R20
+8/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART.v
+F/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART.v
+!i122 46
+L0 2 24
+R12
+R13
+r1
+!s85 0
+31
+R21
+!s107 /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART.v|
+!i113 0
+R19
+R4
+n@u@a@r@t
+vUART_rx
+R6
+R18
+!i10b 1
+!s100 O:OG>:U7n6;Tok;WV9?572
+ISj3??2S?U9N?Fk96QTdmO1
+S1
+R8
+R20
+8/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART_rx.sv
+F/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART_rx.sv
+!i122 47
+L0 2 99
+R12
+R13
+r1
+!s85 0
+31
+R21
+!s107 /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART_rx.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART_rx.sv|
+!i113 0
+R17
+R4
+n@u@a@r@t_rx
+vUART_tx
+R6
+R18
+!i10b 1
+!s100 E=leZ3bKT1E@?<<1imJRj3
+I9ZA:HfFYDXlm`nBkhNb8P1
+S1
+R8
+R20
+8/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART_tx.sv
+F/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART_tx.sv
+!i122 48
+L0 2 88
+R12
+R13
+r1
+!s85 0
+31
+R21
+!s107 /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART_tx.sv|
+!s90 -reportprogress|300|-work|work|-vopt|-sv|-stats=none|/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART_tx.sv|
+!i113 0
+R17
+R4
+n@u@a@r@t_tx
