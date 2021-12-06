@@ -3,6 +3,7 @@ Final project repo of ECE551 in Fall 2021 at UW Madison. <br />
 Owned by Team Doraemon: Shichen (Justin) Qiao, Xin Su, Wenfei Huang, and Kailun Teng. <br />
 
 Note: targeting area: 14052(Tommy), 16242(Eric) <br />
+Note: Changed xx and yy in KnightsPhysics.sv to type logic. Changed cal_done, lftIR, cntrIR, rghtIR, and start_tour in KnightsTour.sv to type logic. Both for pre-synthesis testing purposes. <br />
 Note: Remember to TURN OFF FASTSIM in provided_files/KnightsTour.sv to 0 before synthesis. <br />
 Note: Remember to ADD `timescale 1ns/1ps to all v, sv, and vg files involved in post synthesis validation. <br />
 Note: Only do rst and cal for post synthesis validation in project demo. <br />
