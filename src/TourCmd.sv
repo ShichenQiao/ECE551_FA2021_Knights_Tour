@@ -141,11 +141,9 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 				if(clr_cmd_rdy)
 					nxt_state = HOLD1;
 			end
-			HOLD1: begin
-				moving_vert = 1'b1;			// still moving vertically, but cmd_rdy was knocked down at this stage
+			HOLD1: 							// still moving vertically, but cmd_rdy was knocked down at this stage
 				if(send_resp)
 					nxt_state = VERT;
-			end
 			VERT: begin
 				moving_vert = 1'b1;			// indicate moving vertically
 				cmd_rdy_tour_logic = 1'b1;	// indicate vertical move cmd from tour logic is ready
@@ -153,6 +151,7 @@ module TourCmd(clk,rst_n,start_tour,move,mv_indx,
 					nxt_state = HOLD2;
 			end
 			HOLD2: begin
+				moving_vert = 1'b1;			// still moving vertically, but cmd_rdy was knocked down at this stage
 				if(mv_indx == 8'd23)
 					resp = 8'hA5;			// indicate this is the last move when mv_indx reaches 23
 				if(send_resp)				// when the horizontal move
