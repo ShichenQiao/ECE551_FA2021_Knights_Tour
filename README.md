@@ -17,155 +17,155 @@ Only do rst and cal for post synthesis validation in project demo. <br />
 Project Demo Date/Time: Fri. 12/10/2021 4PM <br />
 
 # Directories
-ECE551_FA2021_Knights_Tour-main
-├── EX21_cmd_proc__charge.pdf
-├── Ex23_KnightsTour.pdf
-├── ProjectSpec.pdf
-├── README.md
-├── TopLevelTestingSynthesis.pdf
-├── backups
-│   ├── 1st_synth
-│   │   ├── ……
-│   ├── 2nd_synth
-│   │   ├── ……
-│   ├── 3rd_synth_PID_pipe
-│   │   ├── ……
-│   ├── 4th_synth_optimized
-│   │   ├── ……
-│   ├── 5th_synth_pretested
-│   │   ├── ……
-│   ├── KnightPhysics_need_eric.sv
-│   ├── KnightPhysics_old.sv
-│   ├── PID_nopipe.sv
-│   ├── PID_pipe_P.sv
-│   ├── PID_tb_nopipe.sv
-│   ├── TourCmd_tb_vert.sv
-│   ├── TourCmd_vert.sv
-│   ├── TourLogic_debug.sv
-│   ├── TourLogic_record_possibles.sv
-│   └── test_suite_coverages.zip
-├── code_coverage
-│   ├── DUT_coverage.zip
-│   ├── ModelsimTutorial_s21.pdf
-│   ├── improved_DUT_coverage.zip
-│   ├── test_suite
-│   │   ├── Test1_rst&cal.sv
-│   │   ├── Test2_simple_moves.sv
-│   │   ├── Test3_simple_fanfare.sv
-│   │   ├── Test4_corner_turns.sv
-│   │   ├── Test5_tour_with_fanfare.sv
-│   │   ├── Test6_resp.sv
-│   │   ├── Test7_all_possible_TL.sv
-│   │   ├── Test8_tour_from_center.sv
-│   │   └── tb_tasks.sv
-│   └── test_suite_improved
-│       ├── Test1_rst&cal.sv
-│       ├── ……
-│       ├── Test8_tour_from_center.sv
-│       ├── Test9_invalid_opcodes_added_after_coverage
-│       │   ├── Test9_console.jpg
-│       │   ├── Test9_invalid_opcodes.sv
-│       │   └── Test9_waves.jpg
-│       └── tb_tasks.sv
-├── lib
-│   ├── ……
-├── post_synth_validation
-│   ├── KnightPhysics.sv
-│   ├── KnightsTour.vg
-│   ├── KnightsTour_tb.sv
-│   ├── RemoteComm.sv
-│   ├── SPI_iNEMO4.sv
-│   ├── UART.v
-│   ├── UART_rx.sv
-│   ├── UART_tx.sv
-│   ├── console.jpg
-│   ├── post_synth.cr.mti
-│   ├── post_synth.mpf
-│   ├── tb_tasks.sv
-│   ├── transcript
-│   ├── vsim.wlf
-│   ├── waves.jpg
-│   └── work
-│       ├── ……
-├── pre_synth_simulation
-│   ├── Test1_console.jpg
-│   ├── Test1_waves.jpg
-│   ├── ……
-│   ├── Test8_console.txt
-│   └── Test8_waves.jpg
-├── provided_files
-│   ├── IR_intf.sv
-│   ├── KnightPhysics.sv
-│   ├── KnightsTour.sv
-│   ├── SPI_iNEMO4.sv
-│   └── inertial_integrator.sv
-├── src
-│   ├── MtrDrv.sv
-│   ├── PID.sv
-│   ├── PWM11.sv
-│   ├── SPI_mnrch.sv
-│   ├── TourCmd.sv
-│   ├── TourLogic.sv
-│   ├── UART.v
-│   ├── UART_rx.sv
-│   ├── UART_tx.sv
-│   ├── UART_wrapper.sv
-│   ├── charge.sv
-│   ├── cmd_proc.sv
-│   ├── inert_intf.sv
-│   └── reset_synch.sv
-├── synthesis
-│   ├── KnightsTour.dc
-│   ├── KnightsTour.vg
-│   ├── KnightsTour_area.txt
-│   ├── KnightsTour_max_delay.rpt
-│   ├── KnightsTour_min_delay.rpt
-│   ├── ……
-└── tests
-    ├── KnightsTour_tb_shell.sv
-    ├── RemoteComm.sv
-    ├── Unit_tests
-    │   ├── CommTB.sv
-    │   ├── MtrDrv_tb.sv
-    │   ├── PID_tb.sv
-    │   ├── PWM11_tb.sv
-    │   ├── SPI_mnrch_tb.sv
-    │   ├── TourCmd_tb.sv
-    │   ├── TourLogic_tb.sv
-    │   ├── UART_tb.sv
-    │   ├── UART_tx_tb.sv
-    │   ├── charge_modelsim_tb.sv
-    │   ├── cmd_proc_tb.sv
-    │   └── inert_intf_tb.sv
-    ├── full_ship_tests
-    │   ├── Test1_rst&cal
-    │   │   └── KnightsTour_tb.sv
-    │   ├── Test2_simple_moves
-    │   │   └── KnightsTour_tb.sv
-    │   ├── Test3_simple_fanfare
-    │   │   └── KnightsTour_tb.sv
-    │   ├── Test4_corner_turns
-    │   │   └── KnightsTour_tb.sv
-    │   ├── Test5_tour_with_fanfare
-    │   │   └── KnightsTour_tb.sv
-    │   ├── Test6_resp
-    │   │   └── KnightsTour_tb.sv
-    │   ├── Test7_all_possible_TL
-    │   │   └── KnightsTour_tb.sv
-    │   ├── Test8_tour_from_center
-    │   │   ├── KnightsTour_tb.sv
-    │   │   ├── hori_first.txt
-    │   │   ├── tour_from_center.jpg
-    │   │   └── vert_first.txt
-    │   └── Test9_invalid_opcodes_added_after_coverage
-    │       ├── KnightsTour_tb.sv
-    │       ├── Test9_console.jpg
-    │       └── Test9_invalid_opcodes.jpg
-    └── tb_tasks.sv
+ECE551_FA2021_Knights_Tour-main <br />
+├── EX21_cmd_proc__charge.pdf <br />
+├── Ex23_KnightsTour.pdf <br />
+├── ProjectSpec.pdf <br />
+├── README.md <br />
+├── TopLevelTestingSynthesis.pdf <br />
+├── backups <br />
+│   ├── 1st_synth <br />
+│   │   ├── …… <br />
+│   ├── 2nd_synth <br />
+│   │   ├── …… <br />
+│   ├── 3rd_synth_PID_pipe <br />
+│   │   ├── …… <br />
+│   ├── 4th_synth_optimized <br />
+│   │   ├── …… <br />
+│   ├── 5th_synth_pretested <br />
+│   │   ├── …… <br />
+│   ├── KnightPhysics_need_eric.sv <br />
+│   ├── KnightPhysics_old.sv <br />
+│   ├── PID_nopipe.sv <br />
+│   ├── PID_pipe_P.sv <br />
+│   ├── PID_tb_nopipe.sv <br />
+│   ├── TourCmd_tb_vert.sv <br />
+│   ├── TourCmd_vert.sv <br />
+│   ├── TourLogic_debug.sv <br />
+│   ├── TourLogic_record_possibles.sv <br />
+│   └── test_suite_coverages.zip <br />
+├── code_coverage <br />
+│   ├── DUT_coverage.zip <br />
+│   ├── ModelsimTutorial_s21.pdf <br />
+│   ├── improved_DUT_coverage.zip <br />
+│   ├── test_suite <br />
+│   │   ├── Test1_rst&cal.sv <br />
+│   │   ├── Test2_simple_moves.sv <br />
+│   │   ├── Test3_simple_fanfare.sv <br />
+│   │   ├── Test4_corner_turns.sv <br />
+│   │   ├── Test5_tour_with_fanfare.sv <br />
+│   │   ├── Test6_resp.sv <br />
+│   │   ├── Test7_all_possible_TL.sv <br />
+│   │   ├── Test8_tour_from_center.sv <br />
+│   │   └── tb_tasks.sv <br />
+│   └── test_suite_improved <br />
+│       ├── Test1_rst&cal.sv <br />
+│       ├── …… <br />
+│       ├── Test8_tour_from_center.sv <br />
+│       ├── Test9_invalid_opcodes_added_after_coverage <br />
+│       │   ├── Test9_console.jpg <br />
+│       │   ├── Test9_invalid_opcodes.sv <br />
+│       │   └── Test9_waves.jpg <br />
+│       └── tb_tasks.sv <br />
+├── lib <br />
+│   ├── …… <br />
+├── post_synth_validation <br />
+│   ├── KnightPhysics.sv <br />
+│   ├── KnightsTour.vg <br />
+│   ├── KnightsTour_tb.sv <br />
+│   ├── RemoteComm.sv <br />
+│   ├── SPI_iNEMO4.sv <br />
+│   ├── UART.v <br />
+│   ├── UART_rx.sv <br />
+│   ├── UART_tx.sv <br />
+│   ├── console.jpg <br />
+│   ├── post_synth.cr.mti <br />
+│   ├── post_synth.mpf <br />
+│   ├── tb_tasks.sv <br />
+│   ├── transcript <br />
+│   ├── vsim.wlf <br />
+│   ├── waves.jpg <br />
+│   └── work <br />
+│       ├── …… <br />
+├── pre_synth_simulation <br />
+│   ├── Test1_console.jpg <br />
+│   ├── Test1_waves.jpg <br />
+│   ├── …… <br />
+│   ├── Test8_console.txt <br />
+│   └── Test8_waves.jpg <br />
+├── provided_files <br />
+│   ├── IR_intf.sv <br />
+│   ├── KnightPhysics.sv <br />
+│   ├── KnightsTour.sv <br />
+│   ├── SPI_iNEMO4.sv <br />
+│   └── inertial_integrator.sv <br />
+├── src <br />
+│   ├── MtrDrv.sv <br />
+│   ├── PID.sv <br />
+│   ├── PWM11.sv <br />
+│   ├── SPI_mnrch.sv <br />
+│   ├── TourCmd.sv <br />
+│   ├── TourLogic.sv <br />
+│   ├── UART.v <br />
+│   ├── UART_rx.sv <br />
+│   ├── UART_tx.sv <br />
+│   ├── UART_wrapper.sv <br />
+│   ├── charge.sv <br />
+│   ├── cmd_proc.sv <br />
+│   ├── inert_intf.sv <br />
+│   └── reset_synch.sv <br />
+├── synthesis <br />
+│   ├── KnightsTour.dc <br />
+│   ├── KnightsTour.vg <br />
+│   ├── KnightsTour_area.txt <br />
+│   ├── KnightsTour_max_delay.rpt <br />
+│   ├── KnightsTour_min_delay.rpt <br />
+│   ├── …… <br />
+└── tests <br />
+    ├── KnightsTour_tb_shell.sv <br />
+    ├── RemoteComm.sv <br />
+    ├── Unit_tests <br />
+    │   ├── CommTB.sv <br />
+    │   ├── MtrDrv_tb.sv <br />
+    │   ├── PID_tb.sv <br />
+    │   ├── PWM11_tb.sv <br />
+    │   ├── SPI_mnrch_tb.sv <br />
+    │   ├── TourCmd_tb.sv <br />
+    │   ├── TourLogic_tb.sv <br />
+    │   ├── UART_tb.sv <br />
+    │   ├── UART_tx_tb.sv <br />
+    │   ├── charge_modelsim_tb.sv <br />
+    │   ├── cmd_proc_tb.sv <br />
+    │   └── inert_intf_tb.sv <br />
+    ├── full_ship_tests <br />
+    │   ├── Test1_rst&cal <br />
+    │   │   └── KnightsTour_tb.sv <br />
+    │   ├── Test2_simple_moves <br />
+    │   │   └── KnightsTour_tb.sv <br />
+    │   ├── Test3_simple_fanfare <br />
+    │   │   └── KnightsTour_tb.sv <br />
+    │   ├── Test4_corner_turns <br />
+    │   │   └── KnightsTour_tb.sv <br />
+    │   ├── Test5_tour_with_fanfare <br />
+    │   │   └── KnightsTour_tb.sv <br />
+    │   ├── Test6_resp <br />
+    │   │   └── KnightsTour_tb.sv <br />
+    │   ├── Test7_all_possible_TL <br />
+    │   │   └── KnightsTour_tb.sv <br />
+    │   ├── Test8_tour_from_center <br />
+    │   │   ├── KnightsTour_tb.sv <br />
+    │   │   ├── hori_first.txt <br />
+    │   │   ├── tour_from_center.jpg <br />
+    │   │   └── vert_first.txt <br />
+    │   └── Test9_invalid_opcodes_added_after_coverage <br />
+    │       ├── KnightsTour_tb.sv <br />
+    │       ├── Test9_console.jpg <br />
+    │       └── Test9_invalid_opcodes.jpg <br />
+    └── tb_tasks.sv <br />
 
-33 directories, 538 files
+33 directories, 538 files <br />
 
-# Journals: <br />
+# Journals
 11/29/2021, 11PM: Created repo, pploaded all DUT files, unit tests, and provided files. <br />
 11/30/2021, 10AM: Uploaded synthesis script. <br />
 11/30/2021, 4PM: Uploaded 1st synthesis results, min delay violated, max delay met, area 15861. <br />
