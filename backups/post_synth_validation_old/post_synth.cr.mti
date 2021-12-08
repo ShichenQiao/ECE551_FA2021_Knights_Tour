@@ -1,0 +1,66 @@
+/filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightPhysics.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightPhysics.sv
+QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
+-- Compiling module KnightPhysics
+-- Compiling module inverse_PWM11e
+
+Top level modules:
+	KnightPhysics
+
+} {} {}} /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/RemoteComm.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/RemoteComm.sv
+QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
+-- Compiling module RemoteComm
+
+Top level modules:
+	RemoteComm
+
+} {} {}} /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART_rx.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART_rx.sv
+QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
+-- Compiling module UART_rx
+
+Top level modules:
+	UART_rx
+
+} {} {}} /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART.v {1 {vlog -work work -vopt -stats=none /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART.v
+QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
+-- Compiling module UART
+
+Top level modules:
+	UART
+
+} {} {}} /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightsTour.vg {1 {vlog -work work -vopt -stats=none /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightsTour.vg
+QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
+-- Compiling module KnightsTour
+
+Top level modules:
+	KnightsTour
+
+} {} {}} /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightsTour_tb.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/KnightsTour_tb.sv
+QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
+-- Compiling module KnightsTour_tb
+-- Importing package tb_tasks
+
+Top level modules:
+	KnightsTour_tb
+
+} {} {}} /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART_tx.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/UART_tx.sv
+QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
+-- Compiling module UART_tx
+
+Top level modules:
+	UART_tx
+
+} {} {}} /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/SPI_iNEMO4.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/SPI_iNEMO4.sv
+QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
+-- Compiling module SPI_iNEMO4
+
+Top level modules:
+	SPI_iNEMO4
+
+} {} {}} /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/tb_tasks.sv {1 {vlog -work work -vopt -sv -stats=none /filespace/s/sqiao6/ece551/ECE551_FA2021_Knights_Tour-main/post_synth_validation/tb_tasks.sv
+QuestaSim vlog 2021.2_2 Compiler 2021.06 Jun 19 2021
+-- Compiling package tb_tasks
+
+Top level modules:
+	--none--
+
+} {} {}}
