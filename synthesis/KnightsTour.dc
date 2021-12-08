@@ -78,7 +78,6 @@ set_fix_hold clk
 compile -map_effort medium
 ungroup -all -flatten
 compile -map_effort medium
-compile -only_hold_time
 
 ##########################################
 # Produce a min_delay & max delay report #
