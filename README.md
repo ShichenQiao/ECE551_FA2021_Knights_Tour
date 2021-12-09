@@ -4,8 +4,10 @@ Owned by Team Doraemon: Shichen (Justin) Qiao, Xin Su, Wenfei Huang, and Kailun 
 
 # Project Statistics
 Total Area:  13937.84 <br />
+Total Area FASTSIM: 13740.97 <br />
 Min Delay Slack: 0.00 (MET) <br />
 Max Delay Slack: 0.36 (MET) <br />
+Max Delay Slack FASTSIM: 0.38 (MET) <br />
 Test Suite Code Coverage: 97.41% <br />
 
 # Important Notes
