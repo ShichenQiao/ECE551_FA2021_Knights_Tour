@@ -1,0 +1,922 @@
+# //  Questa Sim
+# //  Version 2021.2_2 linux Jun 19 2021
+# //
+# //  Copyright 1991-2021 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project post_synth
+# Compile of KnightPhysics.sv was successful.
+# Compile of KnightsTour_tb.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of SPI_iNEMO4.sv was successful.
+# Compile of tb_tasks.sv was successful.
+# Compile of UART.v was successful.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of KnightsTour.vg was successful.
+# 9 compiles, 0 failed with no errors.
+vsim work.KnightsTour_tb -L /filespace/s/sqiao6/ece551/SAED32_lib -voptargs=+acc
+# vsim work.KnightsTour_tb -L /filespace/s/sqiao6/ece551/SAED32_lib -voptargs="+acc" 
+# Start time: 12:41:40 on Dec 08,2021
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(665): (vopt-2685) [TFMPC] - Too few port connections for '\iRST/ff1_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(665): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(669): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/state_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(669): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(671): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iTX/tx_shft_reg_reg[0] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(671): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(673): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iTX/tx_shft_reg_reg[1] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(673): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(675): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iTX/tx_shft_reg_reg[2] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(675): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(677): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iTX/tx_shft_reg_reg[3] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(677): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(679): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iTX/tx_shft_reg_reg[4] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(679): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(681): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iTX/tx_shft_reg_reg[5] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(681): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(683): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iTX/tx_shft_reg_reg[6] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(683): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(685): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iTX/tx_shft_reg_reg[7] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(685): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(687): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iTX/tx_shft_reg_reg[8] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(687): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(689): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iTX/state_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(689): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(722): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iRX/rdy_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(722): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(726): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iRX/RX_sync_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(726): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(728): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iRX/RX_FF1_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(728): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(730): (vopt-2685) [TFMPC] - Too few port connections for '\iCMD/add_0_root_sub_0_root_add_120/U1_11 '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(730): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(786): (vopt-2685) [TFMPC] - Too few port connections for '\iCMD/state_reg[2] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(786): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(790): (vopt-2685) [TFMPC] - Too few port connections for '\iCMD/cntrIR_ff3_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(790): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(792): (vopt-2685) [TFMPC] - Too few port connections for '\iCMD/cntrIR_ff2_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(792): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(794): (vopt-2685) [TFMPC] - Too few port connections for '\iCMD/cntrIR_ff1_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(794): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(826): (vopt-2685) [TFMPC] - Too few port connections for '\iCMD/sub_1_root_sub_0_root_add_120/U2_11 '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(826): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(857): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[15] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(857): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(861): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[13] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(861): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(863): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[12] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(863): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(865): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[11] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(865): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(867): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[10] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(867): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(869): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[9] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(869): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(871): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[8] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(871): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(873): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[7] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(873): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(875): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[6] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(875): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(877): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[5] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(877): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(879): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[4] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(879): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(881): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[3] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(881): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(883): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/timer_reg[2] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(883): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(899): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/SS_n_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(899): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(904): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/SCLK_div_reg[2] '.  Expected 6, found 5.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(904): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(906): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/SCLK_div_reg[1] '.  Expected 6, found 5.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(906): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(910): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/SCLK_div_reg[3] '.  Expected 6, found 5.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(910): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(917): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[1] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(917): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(919): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[2] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(919): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(921): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[3] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(921): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(923): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[4] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(923): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(925): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[5] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(925): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(927): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[6] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(927): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(929): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[7] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(929): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(931): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[8] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(931): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(933): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[9] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(933): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(935): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[10] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(935): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(936): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[11] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(936): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(937): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[12] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(937): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(938): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[13] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(938): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(939): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[14] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(939): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(940): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[15] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(940): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(941): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[16] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(941): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(942): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[17] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(942): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(943): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_off_reg[18] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(943): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(946): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[1] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(946): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(948): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[2] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(948): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(950): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[3] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(950): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(952): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[4] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(952): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(954): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[5] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(954): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(956): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[6] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(956): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(958): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[7] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(958): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(960): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_int_reg[8] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(960): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(998): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/vld_ff2_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(998): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1021): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/smpl_cntr_reg[11] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1021): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1098): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/sub_112/U2_18 '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1098): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1282): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/add_0_root_add_0_root_add_179_2/U1_26 '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1282): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1300): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/mult_119/S1_2_0 '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1300): (vopt-2718) [TFMPC] - Missing connection for port 'S'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1318): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/mult_119/S1_3_0 '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1318): (vopt-2718) [TFMPC] - Missing connection for port 'S'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1336): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/mult_119/S1_4_0 '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1336): (vopt-2718) [TFMPC] - Missing connection for port 'S'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1662): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_FF2_reg[0] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1662): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1664): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_FF1_reg[0] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1664): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1666): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_FF2_reg[1] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1666): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1670): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_FF2_reg[2] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1670): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1674): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_FF2_reg[3] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1674): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1678): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_FF2_reg[4] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1678): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1682): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_FF2_reg[5] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1682): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1686): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_FF2_reg[6] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1686): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1690): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_FF2_reg[7] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1690): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1694): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_FF2_reg[8] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1694): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1698): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_FF2_reg[9] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1698): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1700): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_FF1_reg[9] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1700): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1702): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/integrator_reg[1] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1702): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1704): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/integrator_reg[2] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1704): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1706): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/integrator_reg[3] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1706): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1708): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/integrator_reg[4] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1708): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1710): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/integrator_reg[5] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1710): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1712): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/integrator_reg[6] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1712): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1714): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/integrator_reg[7] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1714): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1716): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/integrator_reg[8] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1716): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1718): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/integrator_reg[9] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1718): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1720): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/integrator_reg[10] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1720): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1722): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/integrator_reg[11] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1722): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1724): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/integrator_reg[12] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1724): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1726): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/integrator_reg[13] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1726): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1879): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/add_0_root_add_0_root_add_140_2/U1_13 '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1879): (vopt-2718) [TFMPC] - Missing connection for port 'CO'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1906): (vopt-2685) [TFMPC] - Too few port connections for '\iMTR/i_left_PWM/cnt_reg[10] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1906): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1965): (vopt-2685) [TFMPC] - Too few port connections for '\iMTR/i_right_PWM/cnt_reg[10] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(1965): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2024): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[21] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2024): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2026): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[20] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2026): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2028): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[19] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2028): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2030): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[18] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2030): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2032): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[17] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2032): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2034): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[16] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2034): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2036): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[15] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2036): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2038): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[14] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2038): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2040): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[13] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2040): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2042): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[12] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2042): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2044): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[11] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2044): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2046): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[10] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2046): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2048): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[9] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2048): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2050): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[8] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2050): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2052): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[7] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2052): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2054): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[6] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2054): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2056): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[5] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2056): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2058): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[4] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2058): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2060): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[3] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2060): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2062): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[2] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2062): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2064): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/blanking_timer_reg[1] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2064): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2072): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/cntrIR_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2072): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2074): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/cntrIR_FF1_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2074): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2077): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/lftIR_FF1_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2077): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2079): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/rghtIR_FF1_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2079): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2083): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/smpl_tmr_reg[16] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2083): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2091): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/smpl_tmr_reg[12] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2091): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2093): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/smpl_tmr_reg[11] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2093): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2095): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/smpl_tmr_reg[10] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2095): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2097): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/smpl_tmr_reg[9] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2097): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2099): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/smpl_tmr_reg[8] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2099): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2101): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/smpl_tmr_reg[7] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2101): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2103): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/smpl_tmr_reg[6] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2103): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2105): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/smpl_tmr_reg[5] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2105): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2107): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/smpl_tmr_reg[4] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2107): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2109): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/smpl_tmr_reg[3] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2109): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2111): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/smpl_tmr_reg[2] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2111): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2113): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/smpl_tmr_reg[1] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2113): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2117): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/iDUTY/PWM_sig_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2117): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2119): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/iDUTY/cnt_reg[2] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2119): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2121): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/iDUTY/cnt_reg[1] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2121): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2123): (vopt-2685) [TFMPC] - Too few port connections for '\iIR/iDUTY/cnt_reg[0] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2123): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2215): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/piezo_n_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2215): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2223): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/num_clk_reg[14] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2223): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2243): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/num_clk_reg[4] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2243): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2249): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/num_clk_reg[1] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2249): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2251): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/num_clk_reg[0] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2251): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2253): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[23] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2253): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2255): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[22] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2255): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2257): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[21] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2257): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2259): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[20] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2259): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2261): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[19] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2261): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2263): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[18] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2263): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2265): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[17] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2265): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2267): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[16] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2267): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2269): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[15] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2269): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2271): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[14] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2271): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2273): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[13] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2273): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2275): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[12] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2275): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2277): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[11] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2277): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2279): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[10] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2279): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2281): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[9] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2281): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2283): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[8] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2283): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2285): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[7] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2285): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2287): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[6] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2287): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2289): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[5] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2289): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2291): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[4] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2291): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2293): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[3] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2293): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2295): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[2] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2295): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2297): (vopt-2685) [TFMPC] - Too few port connections for '\ICHRG/dura_reg[1] '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(2297): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4077): (vopt-2685) [TFMPC] - Too few port connections for '\iRST/rst_n_reg '.  Expected 5, found 4.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4077): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4080): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/frwrd_pipe2_reg[9] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4080): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4082): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/frwrd_pipe2_reg[8] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4082): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4084): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/frwrd_pipe2_reg[7] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4084): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4086): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/frwrd_pipe2_reg[6] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4086): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4088): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/frwrd_pipe2_reg[5] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4088): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4090): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/frwrd_pipe2_reg[4] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4090): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4092): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/frwrd_pipe2_reg[3] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4092): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4094): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/frwrd_pipe2_reg[2] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4094): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4096): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/frwrd_pipe_reg[2] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4096): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4098): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/frwrd_pipe_reg[9] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4098): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4100): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/frwrd_pipe_reg[7] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4100): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4102): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/frwrd_pipe_reg[6] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4102): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4104): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/frwrd_pipe_reg[4] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4104): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4106): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/frwrd_pipe_reg[5] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4106): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4108): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/frwrd_pipe_reg[8] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4108): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4110): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/frwrd_pipe_reg[3] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4110): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4112): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/INT_ff1_reg '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4112): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4115): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[15] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4115): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4119): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[1] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4119): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4125): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iRX/baud_cnt_reg[1] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4125): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4127): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[2] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4127): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4129): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iRX/baud_cnt_reg[5] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4129): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4131): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iRX/baud_cnt_reg[3] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4131): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4133): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iRX/baud_cnt_reg[2] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4133): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4135): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iRX/baud_cnt_reg[6] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4135): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4137): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iRX/baud_cnt_reg[4] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4137): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4139): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[3] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4139): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4141): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[4] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4141): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4143): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[5] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4143): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4145): (vopt-2685) [TFMPC] - Too few port connections for '\iTL/move_try_reg[0] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4145): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4146): (vopt-2685) [TFMPC] - Too few port connections for '\iTL/move_try_reg[2] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4146): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4147): (vopt-2685) [TFMPC] - Too few port connections for '\iTL/move_try_reg[1] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4147): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4150): (vopt-2685) [TFMPC] - Too few port connections for '\iTL/move_try_reg[7] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4150): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4157): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[6] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4157): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4160): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_pipe_reg[8] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4160): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4162): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_pipe_reg[7] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4162): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4164): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_pipe_reg[6] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4164): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4166): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_pipe_reg[5] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4166): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4168): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_pipe_reg[4] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4168): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4170): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_pipe_reg[3] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4170): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4172): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_pipe_reg[2] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4172): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4174): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/err_sat_pipe_reg[1] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4174): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4176): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[7] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4176): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4190): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[8] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4190): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4192): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[9] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4192): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4194): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[10] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4194): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4196): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[11] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4196): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4198): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[12] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4198): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4200): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[13] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4200): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4202): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[14] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4202): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4204): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[15] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4204): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4206): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[16] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4206): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4208): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[17] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4208): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4210): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/moving_pipe_reg '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4210): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4213): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/yawH_reg[7] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4213): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4215): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/yawH_reg[6] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4215): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4217): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/yawH_reg[5] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4217): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4219): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/yawH_reg[4] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4219): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4221): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/yawH_reg[3] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4221): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4223): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/yawH_reg[2] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4223): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4225): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/yawH_reg[1] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4225): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4227): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/yawH_reg[0] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4227): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4229): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_scaled_reg[18] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4229): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4231): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/yawL_reg[7] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4231): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4233): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/yawL_reg[6] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4233): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4235): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/yawL_reg[5] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4235): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4237): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/yawL_reg[4] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4237): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4239): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/yawL_reg[3] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4239): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4241): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/yawL_reg[2] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4241): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4243): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/yawL_reg[1] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4243): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4245): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/yawL_reg[0] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4245): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4255): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iTX/baud_cnt_reg[9] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4255): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4263): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iTX/baud_cnt_reg[5] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4263): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4267): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iTX/baud_cnt_reg[3] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4267): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4269): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iTX/baud_cnt_reg[2] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4269): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4301): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/INT_ff2_reg '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4301): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4308): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/high_byte_reg[3] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4308): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4313): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/high_byte_reg[7] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4313): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4314): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/high_byte_reg[4] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4314): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4315): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/high_byte_reg[2] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4315): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4316): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[0] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4316): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4317): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/MISO_smpl_reg '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4317): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4319): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iRX/rx_shft_reg_reg[6] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4319): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4321): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iRX/rx_shft_reg_reg[5] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4321): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4325): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iRX/rx_shft_reg_reg[3] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4325): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4329): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iRX/rx_shft_reg_reg[1] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4329): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4333): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iRX/rx_shft_reg_reg[8] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4333): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4337): (vopt-2685) [TFMPC] - Too few port connections for '\iCMD/sq_to_move_reg[2] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4337): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4338): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[10] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4338): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4344): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[9] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4344): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4345): (vopt-2685) [TFMPC] - Too few port connections for '\iCMD/sq_to_move_reg[0] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4345): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4346): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[14] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4346): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4347): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[7] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4347): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4349): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[4] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4349): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4351): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[3] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4351): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4353): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[2] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4353): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4355): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[0] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4355): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4361): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[12] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4361): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4363): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[6] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4363): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4364): (vopt-2685) [TFMPC] - Too few port connections for '\iCMD/sq_to_move_reg[1] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4364): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4367): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[13] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4367): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4368): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[5] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4368): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4369): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iSPI/shft_reg_reg[1] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4369): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4392): (vopt-2685) [TFMPC] - Too few port connections for '\iCMD/desired_heading_reg[0] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4392): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4404): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iRX/baud_cnt_reg[7] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4404): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4412): (vopt-2685) [TFMPC] - Too few port connections for '\iWRAP/iUART/iRX/baud_cnt_reg[8] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4412): (vopt-2718) [TFMPC] - Missing connection for port 'Q'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4433): (vopt-2685) [TFMPC] - Too few port connections for '\iCNTRL/PID_pipe_reg[3] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4433): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4638): (vopt-2685) [TFMPC] - Too few port connections for '\iTL/visited_reg[0][3] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4638): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4639): (vopt-2685) [TFMPC] - Too few port connections for '\iTL/visited_reg[0][1] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4639): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4640): (vopt-2685) [TFMPC] - Too few port connections for '\iTL/visited_reg[0][2] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4640): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4641): (vopt-2685) [TFMPC] - Too few port connections for '\iTL/visited_reg[0][4] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4641): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4642): (vopt-2685) [TFMPC] - Too few port connections for '\iTL/visited_reg[0][0] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4642): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4643): (vopt-2685) [TFMPC] - Too few port connections for '\iTL/visited_reg[1][3] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4643): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4644): (vopt-2685) [TFMPC] - Too few port connections for '\iTL/visited_reg[1][1] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4644): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4677): (vopt-2685) [TFMPC] - Too few port connections for '\iTL/visited_reg[1][0] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4677): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4848): (vopt-2685) [TFMPC] - Too few port connections for '\iTL/visited_reg[1][2] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4848): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4849): (vopt-2685) [TFMPC] - Too few port connections for '\iTL/visited_reg[1][4] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4849): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4864): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[17] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4864): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4866): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[2] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4866): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4868): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[3] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4868): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4870): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[4] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4870): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4872): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[5] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4872): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4874): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[6] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4874): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4876): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[7] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4876): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4878): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[8] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4878): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4880): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[9] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4880): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4882): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[10] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4882): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4884): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[11] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4884): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4886): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[12] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4886): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4888): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[13] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4888): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4890): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[14] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4890): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4892): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[15] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4892): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4894): (vopt-2685) [TFMPC] - Too few port connections for '\iNEMO/iINT/yaw_comp_reg[16] '.  Expected 4, found 3.
+# ** Warning: /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour.vg(4894): (vopt-2718) [TFMPC] - Missing connection for port 'QN'.
+# ** Note: (vopt-143) Recognized 1 FSM in module "SPI_iNEMO4(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "RemoteComm(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=606.
+# Loading sv_std.std
+# Loading work.tb_tasks(fast)
+# Loading work.KnightsTour_tb(fast)
+# Loading work.KnightsTour(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFNARX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFARX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFASX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.HADDX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.FADDX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFSSRX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFARX2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XOR3X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NOR4X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OA221X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AND2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OAI22X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND2X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND4X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO21X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO221X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AOI21X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND3X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AND3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OR2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OR3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OA21X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NOR2X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO22X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NOR3X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OA22X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO222X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AND4X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OA222X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AOI222X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XOR3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFX2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.INVX2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NBUFFX2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NBUFFX4_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.INVX0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XOR2X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.INVX4_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO21X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO22X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO222X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.INVX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO221X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NBUFFX8_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AND2X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XOR2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OAI21X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XNOR2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NOR2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND2X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XNOR3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OAI221X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OR4X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AOI22X1_LVT(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.KnightPhysics(fast)
+# Loading work.SPI_iNEMO4(fast)
+# Loading work.inverse_PWM11e(fast)
+vsim -L /filespace/s/sqiao6/ece551/SAED32_lib -voptargs=+acc work.KnightsTour_tb -t ns +notimingchecks
+# End time: 12:42:15 on Dec 08,2021, Elapsed time: 0:00:35
+# Errors: 0, Warnings: 612
+# vsim -L /filespace/s/sqiao6/ece551/SAED32_lib -voptargs="+acc" work.KnightsTour_tb -t ns "+notimingchecks" 
+# Start time: 12:42:15 on Dec 08,2021
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading sv_std.std
+# Loading work.tb_tasks(fast)
+# Loading work.KnightsTour_tb(fast)
+# Loading work.KnightsTour(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFNARX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFARX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFASX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.HADDX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.FADDX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFSSRX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFARX2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XOR3X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NOR4X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OA221X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AND2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OAI22X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND2X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND4X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO21X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO221X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AOI21X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND3X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AND3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OR2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OR3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OA21X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NOR2X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO22X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NOR3X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OA22X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO222X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AND4X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OA222X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AOI222X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XOR3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFX2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.INVX2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NBUFFX2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NBUFFX4_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.INVX0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XOR2X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.INVX4_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO21X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO22X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO222X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.INVX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO221X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NBUFFX8_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AND2X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XOR2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OAI21X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XNOR2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NOR2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND2X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XNOR3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OAI221X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OR4X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AOI22X1_LVT(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.KnightPhysics(fast)
+# Loading work.SPI_iNEMO4(fast)
+# Loading work.inverse_PWM11e(fast)
+add wave -position insertpoint sim:/KnightsTour_tb/*
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading work.tb_tasks(fast)
+# Loading work.KnightsTour_tb(fast)
+# Loading work.KnightsTour(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFNARX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFARX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFASX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.HADDX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.FADDX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFSSRX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFARX2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XOR3X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NOR4X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OA221X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AND2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OAI22X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND2X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND4X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO21X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO221X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AOI21X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND3X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AND3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OR2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OR3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OA21X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NOR2X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO22X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NOR3X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OA22X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO222X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AND4X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OA222X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AOI222X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XOR3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFX2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.INVX2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NBUFFX2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NBUFFX4_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.INVX0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XOR2X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.INVX4_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO21X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO22X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO222X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.INVX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO221X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NBUFFX8_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AND2X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XOR2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OAI21X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XNOR2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NOR2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND2X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XNOR3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OAI221X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OR4X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AOI22X1_LVT(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.KnightPhysics(fast)
+# Loading work.SPI_iNEMO4(fast)
+# Loading work.inverse_PWM11e(fast)
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading work.tb_tasks(fast)
+# Loading work.KnightsTour_tb(fast)
+# Loading work.KnightsTour(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFNARX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFARX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFASX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.HADDX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.FADDX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFSSRX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFARX2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XOR3X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NOR4X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OA221X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AND2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OAI22X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND2X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND4X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO21X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO221X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AOI21X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND3X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AND3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OR2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OR3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OA21X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NOR2X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO22X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NOR3X0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OA22X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO222X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AND4X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OA222X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AOI222X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XOR3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.DFFX2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.INVX2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NBUFFX2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NBUFFX4_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.INVX0_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XOR2X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.INVX4_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO21X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO22X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO222X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.INVX1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AO221X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NBUFFX8_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AND2X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XOR2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OAI21X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XNOR2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NOR2X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.NAND2X2_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.XNOR3X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OAI221X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.OR4X1_LVT(fast)
+# Loading /filespace/s/sqiao6/ece551/SAED32_lib.AOI22X1_LVT(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.KnightPhysics(fast)
+# Loading work.SPI_iNEMO4(fast)
+# Loading work.inverse_PWM11e(fast)
+run -all
+# Causality operation skipped due to absence of debug database file
+# The Knights is now at (2.50, 2.50)
+# YAHOO! All test passed! Justin Qiao is unstoppable! 
+# ** Note: $stop    : /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour_tb.sv(72)
+#    Time: 336959735 ns  Iteration: 1  Instance: /KnightsTour_tb
+# Break in Module KnightsTour_tb at /filespace/s/sqiao6/ece551/post_synth_validation/KnightsTour_tb.sv line 72
