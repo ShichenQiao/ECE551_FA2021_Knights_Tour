@@ -1,0 +1,104 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : KnightsTour
+Version: S-2021.06
+Date   : Wed Dec  8 20:09:32 2021
+****************************************
+
+Operating Conditions: tt0p85v25c   Library: saed32lvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: iNEMO/iINT/yaw_int_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: iNEMO/iINT/yaw_int_reg[26]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  KnightsTour        16000                 saed32lvt_tt0p85v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  iNEMO/iINT/yaw_int_reg[0]/CLK (DFFARX1_LVT)             0.00       0.00 r
+  iNEMO/iINT/yaw_int_reg[0]/Q (DFFARX1_LVT)               0.09       0.09 f
+  U1715/Y (AND2X1_LVT)                                    0.05       0.14 f
+  iNEMO/iINT/add_2_root_add_0_root_add_176_3/U1_1/S (FADDX1_LVT)
+                                                          0.11       0.26 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_1/CO (FADDX1_LVT)
+                                                          0.09       0.35 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_2/CO (FADDX1_LVT)
+                                                          0.08       0.43 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_3/CO (FADDX1_LVT)
+                                                          0.08       0.51 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_4/CO (FADDX1_LVT)
+                                                          0.08       0.59 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_5/CO (FADDX1_LVT)
+                                                          0.08       0.67 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_6/CO (FADDX1_LVT)
+                                                          0.08       0.76 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_7/CO (FADDX1_LVT)
+                                                          0.08       0.84 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_8/CO (FADDX1_LVT)
+                                                          0.08       0.92 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_9/CO (FADDX1_LVT)
+                                                          0.08       1.00 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_10/CO (FADDX1_LVT)
+                                                          0.08       1.08 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_11/CO (FADDX1_LVT)
+                                                          0.08       1.16 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_12/CO (FADDX1_LVT)
+                                                          0.08       1.25 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_13/CO (FADDX1_LVT)
+                                                          0.08       1.33 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_14/CO (FADDX1_LVT)
+                                                          0.08       1.41 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_15/CO (FADDX1_LVT)
+                                                          0.08       1.49 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_16/CO (FADDX1_LVT)
+                                                          0.08       1.57 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_17/CO (FADDX1_LVT)
+                                                          0.08       1.65 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_18/CO (FADDX1_LVT)
+                                                          0.08       1.74 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_19/CO (FADDX1_LVT)
+                                                          0.08       1.82 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_20/CO (FADDX1_LVT)
+                                                          0.08       1.90 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_21/CO (FADDX1_LVT)
+                                                          0.10       2.00 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_22/CO (FADDX1_LVT)
+                                                          0.08       2.08 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_23/CO (FADDX1_LVT)
+                                                          0.08       2.16 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_24/CO (FADDX1_LVT)
+                                                          0.08       2.24 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_25/CO (FADDX1_LVT)
+                                                          0.08       2.32 r
+  iNEMO/iINT/add_0_root_add_0_root_add_176_3/U1_26/Y (XOR3X2_LVT)
+                                                          0.05       2.37 r
+  U1705/Y (AO22X1_LVT)                                    0.05       2.42 r
+  iNEMO/iINT/yaw_int_reg[26]/D (DFFARX1_LVT)              0.01       2.44 r
+  data arrival time                                                  2.44
+
+  clock clk (rise edge)                                   3.00       3.00
+  clock network delay (ideal)                             0.00       3.00
+  clock uncertainty                                      -0.15       2.85
+  iNEMO/iINT/yaw_int_reg[26]/CLK (DFFARX1_LVT)            0.00       2.85 r
+  library setup time                                     -0.03       2.82
+  data required time                                                 2.82
+  --------------------------------------------------------------------------
+  data required time                                                 2.82
+  data arrival time                                                 -2.44
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.38
+
+
+1
