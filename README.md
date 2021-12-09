@@ -182,3 +182,4 @@ ECE551_FA2021_Knights_Tour-main
 12/5/2021, 10PM: Uploaded final synthesis results, pre-synthesis tests and results, and post-synthesis validation results. Area = 13944.14, timings are met. One last step before demo: code coverage. <br />
 12/6/2021: 11PM: Finalized project. Conducted code coverage. Original test suite coverage: 96.98%. Improved by adding Test9_invalid_opcodes. Current coverage: 97.41% <br />
 12/8/2021: 2PM: Updated synthesis script, re-run post-synthesis simulation. Resulted in a less area. <br />
+12/8/8PM: Uploaded synthesis results and post synthesis simulations with FASTSIM ON.
